@@ -1,0 +1,65 @@
+
+
+<%= form_for:user, :url => {:controller=>'home',:action=>'editparent1'} do |f| %>
+
+
+<br/><br/><br/><br/><br/><br/>
+
+<h2>Work details</h2>
+
+<style>
+
+	
+	 input[type=text] { float: right; width: 250px; }
+
+</style>
+
+
+  <br/><br/>
+
+
+
+
+ <br/><div><%= f.label:Companyname %>
+  <%= f.text_field:companyname %></div><br />
+
+ <div><%= f.label:Title%>
+  <%= f.text_field:title %></div><br />
+
+ <div><%= f.label:jobcategory %>
+  <%= f.text_field:jobcategory %></div><br/>
+<div>
+<%= f.label:jobstart %>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<%= f.select :jobstart, options_for_select(['2000', '2001', '2002', '2003', '2004']) %> </div><br/>
+ <div> <%= f.label:jobend %>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+ <%= f.select :jobend, options_for_select(['2000', '2001', '2002', '2003', '2004']) %>
+</div><br/>
+<div><%= f.label:Totalyearofexperience %>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+<%= f.select :totalyearofexperience, options_for_select(['Chennai', 'Madurai', 'Combaitore', 'Trichy', 'Salem']) %> </div><br/>
+
+
+<div><%= f.label:HomeAddress %>
+  <%= f.text_field:addressline1 %></div><br />
+
+ <div><%= f.label:CityTown %>
+  <%= f.text_field:citytown %></div><br />
+<div><%= f.label:State %>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<%= f.select :state, options_for_select(['Chennai', 'Madurai', 'Combaitore', 'Trichy', 'Salem']) %> </div><br/>
+ 
+  
+<div><%= f.label:Descripition %>
+  <%= f.text_field:description %></div><br />
+
+
+
+
+
+
+  <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <%= f.submit "Save changes" %></div>
+<% end %>
+
+

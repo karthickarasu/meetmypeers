@@ -1,0 +1,4 @@
+class FeedbackController < ApplicationController
+  def feedback
+  end
+end

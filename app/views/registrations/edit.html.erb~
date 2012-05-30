@@ -1,0 +1,68 @@
+<h2>Sign up</h2>
+
+<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+
+  <div><%= f.label :email %><br />
+  <%= f.email_field :email %></div>
+
+  <div><%= f.label :password %><br />
+  <%= f.password_field :password %></div>
+
+  <div><%= f.label :password_confirmation %><br />
+  <%= f.password_field :password_confirmation %></div>
+
+
+
+
+  
+  <div><%= f.label:FirstName %><br />
+  <%= f.text_field:first_name %></div>
+
+  <div><%= f.label:LastName %><br />
+  <%= f.text_field:last_name %></div>
+
+<div >
+  <%= f.label:Gender %><br />
+  <%= f.radio_button :gender, 'male' %>
+  <%= f.label :male, 'Male' %>
+  <%= f.radio_button :gender, 'female'%>
+  <%= f.label :female, 'Female'  %>
+</div>
+
+
+
+  <DIV >
+   <DIV >
+   <span >
+       <script>
+    $(function() {
+        $( "#datepicker" ).datepicker({
+            changeMonth: true,
+            changeYear: true
+        });
+    });
+    </script>
+
+
+
+<div class="demo">
+
+<p>Date: <input type="text" id="datepicker"></p>
+
+</div><!-- End demo -->
+   </span>
+   </DIV>
+   </DIV>
+<div>
+
+
+</div>
+
+  <div><%= f.submit "Sign up" %></div>
+<% end %>
+<%= render :partial => "devise/shared/links" %>
+
+
+</DIV>
+</DIV>

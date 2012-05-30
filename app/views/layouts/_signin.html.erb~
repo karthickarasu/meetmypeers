@@ -1,0 +1,213 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>CSS Menu Maker Installation Instructions</title>
+
+<style type="text/css">
+   body{padding:20px; font-size:14px; color:#000000; font-family:Arial, Helvetica, sans-serif;}
+   h2 {font-weight:bold; color:#000099; margin:10px 0px; }
+   p span {color:#006600; font-weight:bold; }
+   a, a:link, a:visited {color:#0000FF;}
+   textarea {width: 100%; padding: 10px; margin: 10px 0 15px 0; font-size: 13px; font-family: Consolas,monospace;}
+   textarea.html {height: 300px;}
+   p {margin: 0 0 10px 0;}
+   code, pre {font-family: Consolas,monospace; color: green;}
+   ol li {margin: 0 0 15px 0;}
+</style>
+<link href="/menu_assets/styles.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+
+<h2><%= image_tag("u1.gif", :alt => "u1 feed") %></h2>
+
+
+<span class='cssmenu'>
+<ul>
+   <li class='active '><a href='#'><span>Profiles</span></a>
+       <ul>
+         <li><span><%= link_to "Edit profile", home_editparent_path %></span></li>
+         <li><span><%= link_to "view profile", dashboard_profile_path %></span></li>
+ 	 <li><span><%= link_to "Add Work", home_edwork_path %></span></li>
+         <li><span><%= link_to "Edit Work", home_editwork_path %></span></li>
+	 <li><span><%= link_to "view Work", home_viewwork_path %></span></li>
+        
+      </ul>
+</li>
+   <li><a href='#'><span>My peers</span></a>
+      <ul>
+         <li><%=link_to "Peers list",home_peer_path %></li>
+         <li><a href='#'><span>Location list</span></a></li>
+	<li><span><%= link_to "Add Education", home_new_path %></span></li>
+	  <li><span><%= link_to "Edit Education", home_editedu_path %></span></li>
+	  <li><span><%= link_to "view Education", home_viewedu_path %></span></li>
+      </ul>
+   </li>
+   <li><a href='#'><span>Meetings</span></a>
+<ul>
+         <li><a href='#'><span>Scheduled meetings</span></a></li>
+         <li><a href='#'><span>Meeting Request</span></a></li>
+      </ul>
+</li>
+  
+</ul>
+</span>
+<div style="clear:both; margin: 0 0 30px 0;">&nbsp;</div>
+
+
+
+
+<DIV id=u2 style="position:absolute; left:516px; top:10px; width:150px; height:16px; ; ; text-align: left ; font-family:Arial; text-align:left;" >
+<DIV id=u2_rtf><span style=" font-family:'Arial'; color:#000000; font-size:10pt;"><div id="user_nav" align="right"><%if current_user %>Welcome <%= current_user.email %> <% end %></div></span></DIV></DIV>
+<DIV id=u3 style="position:absolute; left:687px; top:10px; width:40px; height:16px; ; ; text-align: left ; font-family:Arial; text-align:left;" >
+<DIV id=u3_rtf><span style=" font-family:'Arial'; color:#0000FF; font-size:10pt;"><u><%= link_to "Home", user_session_path %></u></span></DIV></DIV>
+<DIV id=u3ann style="font-size:1px; position:absolute; left:718px; top:6px; width:1px; height:1px; overflow:visible"></DIV>
+
+<DIV id=u4 style="position:absolute; left:740px; top:10px; width:60px; height:16px; ; ; text-align: left ; font-family:Arial; text-align:left;" >
+<DIV id=u4_rtf><span style=" font-family:'Arial'; color:#0000FF; font-size:10pt;"><u><%=link_to "Sign Out", destroy_user_session_path %></u></span></DIV></DIV>
+<DIV id=u4ann style="font-size:1px; position:absolute; left:791px; top:6px; width:1px; height:1px; overflow:visible"></DIV>
+ <%= form_tag(:controller => "home", :action => "search", :params => params) do %>
+<div style="position:absolute; left:540px; top:50px; width:500px; height:25px; ; ; text-align: left ; font-family:Arial; text-align:left;" >
+ <%=text_field_tag :name %>
+ </div>
+<%= submit_tag "search",:id=>"u6",:style=>"position:absolute; left:780px; top:50px; width:60px; height:25px; ; ; text-align: center ; font-family:'Arial'; font-size: 10pt; color:#000000; font-style:normal; font-weight:normal; text-decoration:none" %>
+  <% end %>
+
+<DIV id=u6ann style="font-size:1px; position:absolute; left:775px; top:62px; width:1px; height:1px; overflow:visible"></DIV>
+
+<span style="position:absolute; left:729px; top:10px; width:7px; height:23px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='Home--Dashboard_files/u7.png',sizingMethod='scale');
+"><img style="width:7px; height:23px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="Home--Dashboard_files/u7.png" border="0" alt=""></span>
+
+
+
+<span style="position:absolute; left:17px; top:86px; width:425px; height:29px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='Home--Dashboard_files/u8.png',sizingMethod='scale');
+"><img style="width:425px; height:29px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="Home--Dashboard_files/u8.png" border="0" alt=""></span>
+
+
+
+<DIV id=u8container style="position:absolute; left:20px; top:89px; width:417px; height:21px;; overflow:visible">
+
+<DIV id=u9 style="position:absolute; left:0px; top:0px; width:421px; height:25px;"></DIV>
+
+
+
+
+
+
+
+<DIV id=u86 style="position:absolute; left:17px; top:1300px; width:140px; height:16px; ; ; text-align: left ; font-family:Arial; text-align:left;" >
+<DIV id=u86_rtf><span style=" font-family:'Arial'; color:#0000FF; font-size:10pt;"><u><%=link_to "AboutMeetmypeers",static_aboutus_path %></u></span></DIV></DIV>
+<span style="position:absolute; left:139px; top:989px; width:5px; height:21px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='Signup_files/u87.png',sizingMethod='scale');
+"><img style="width:5px; height:21px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="Signup_files/u87.png" border="0" alt=""></span>
+
+<IMG id=u87 src="Resources/transparent.gif" style="position:absolute; left:138.5px; top:989px; width:2px; height:18px">
+
+<DIV id=u88 style="position:absolute; left:197px; top:1300px; width:80px; height:16px; ; ; text-align: left ; font-family:Arial; text-align:left;" >
+<DIV id=u88_rtf><span style=" font-family:'Arial'; color:#0000FF; font-size:10pt;"><u><%=link_to "Contact us",static_contactus_path %></u></span></DIV></DIV>
+<DIV id=u89 style="position:absolute; left:148px; top:1300px; width:40px; height:16px; ; ; text-align: left ; font-family:Arial; text-align:left;" >
+<DIV id=u89_rtf><span style=" font-family:'Arial'; color:#0000FF; font-size:10pt;"><u><%=link_to "Legal",static_legal_path %></u></span></DIV></DIV>
+<span style="position:absolute; left:188px; top:989px; width:5px; height:21px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='Signup_files/u90.png',sizingMethod='scale');
+"><img style="width:5px; height:21px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="Signup_files/u90.png" border="0" alt=""></span>
+
+<IMG id=u90 src="Resources/transparent.gif" style="position:absolute; left:187.5px; top:989px; width:2px; height:18px">
+
+<DIV id=u91 style="position:absolute; left:110px; top:758px; width:20px; height:24px; ; ; text-align: left ; font-family:Arial; text-align:left;" >
+<DIV id=u91_rtf><span style=" font-family:'Arial'; color:#FF6600; font-size:16pt;"></span></DIV></DIV>
+<DIV id=ou92 style="position:absolute; left:632px; top:140px; width:206px; height:131px;; overflow:visible">
+
+<span style="position:absolute; left:-3px; top:-3px; width:214px; height:139px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='Signup_files/u92.png',sizingMethod='scale');
+"><img style="width:214px; height:139px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="Signup_files/u92.png" border="0" alt=""></span>
+
+</DIV>
+<DIV id=u92container style="position:absolute; left:632px; top:140px; width:206px; height:131px;; overflow:visible">
+
+<DIV id=u93 style="position:absolute; left:2px; top:57px; width:201px; height:16px; ; ; text-align: center ; font-family:Arial; text-align:left;" >
+<DIV id=u93_rtf>&nbsp;</DIV></DIV>
+</DIV>
+<IMG id=u92 src="Resources/transparent.gif" style="position:absolute; left:632px; top:140px; width:205px; height:130px"  >
+
+<span style="position:absolute; left:647px; top:150px; width:29px; height:17px">
+<IMG id=ou94 src="Signup_files/u94.jpg" style="position:absolute;left:0px;top:0px;width:29px;height:17px">
+</span>
+<IMG id=u94 src="Resources/transparent.gif" style="position:absolute; left:647px; top:150px; width:29px; height:17px"   >
+
+<DIV id=u95 style="position:absolute; left:677px; top:150px; width:130px; height:16px; ; ; text-align: left ; font-family:Arial; text-align:left;" >
+<DIV id=u95_rtf><span style=" font-family:'Arial'; color:#0000FF; font-size:10pt;"><u><%=link_to "Change password",edit_user_registration_path%></u> ,</span></DIV></DIV>
+<DIV id=u96 style="position:absolute; left:677px; top:174px; width:110px; height:16px; ; ; text-align: left ; font-family:Arial; text-align:left;" >
+<DIV id=u96_rtf><span style=" font-family:'Arial'; color:#0000FF; font-size:10pt;"><u><%=link_to "Meeting request",inbox_path %></u></span></DIV></DIV>
+<DIV id=u97 style="position:absolute; left:777px; top:176px; width:70px; height:16px; ; ; text-align: left ; font-family:Arial; text-align:left;" >
+<DIV id=u97_rtf><span style=" font-family:'Arial'; color:#000000; font-size:10pt;">and more </span></DIV></DIV>
+<DIV id=u98 style="position:absolute; left:721px; top:200px; width:50px; height:16px; ; ; text-align: left ; font-family:Arial; text-align:left;" >
+<DIV id=u98_rtf><span style=" font-family:'Arial'; color:#0000FF; font-size:10pt;"><u>Home</u></span></DIV></DIV>
+<DIV id=u99 style="position:absolute; left:767px; top:200px; width:40px; height:16px; ; ; text-align: left ; font-family:Arial; text-align:left;" >
+<DIV id=u99_rtf><span style=" font-family:'Arial'; color:#000000; font-size:10pt;">page</span></DIV></DIV>
+<DIV id=u100 style="position:absolute; left:677px; top:200px; width:50px; height:16px; ; ; text-align: left ; font-family:Arial; text-align:left;" >
+<DIV id=u100_rtf><span style=" font-family:'Arial'; color:#000000; font-size:10pt;">on the</span></DIV></DIV>
+<span style="position:absolute; left:647px; top:232px; width:29px; height:17px">
+<IMG id=ou101 src="Signup_files/u101.jpg" style="position:absolute;left:0px;top:0px;width:29px;height:17px">
+</span>
+<IMG id=u101 src="Resources/transparent.gif" style="position:absolute; left:647px; top:232px; width:29px; height:17px"   >
+
+<DIV id=u102 style="position:absolute; left:675px; top:234px; width:130px; height:16px; ; ; text-align: left ; font-family:Arial; text-align:left;" >
+<DIV id=u102_rtf><span style=" font-family:'Arial'; color:#0000FF; font-size:10pt;"><u><%=link_to "Image upload",static_legal_path %></u></span></DIV></DIV>
+<DIV id=ou103 style="position:absolute; left:635px; top:296px; width:206px; height:145px;; overflow:visible">
+
+<span style="position:absolute; left:-3px; top:-3px; width:214px; height:153px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='Signup_files/u103.png',sizingMethod='scale');
+"><img style="width:214px; height:153px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="Signup_files/u103.png" border="0" alt=""></span>
+
+</DIV>
+<DIV id=u103container style="position:absolute; left:635px; top:296px; width:206px; height:145px;; overflow:visible">
+
+<DIV id=u104 style="position:absolute; left:2px; top:64px; width:201px; height:16px; ; ; text-align: center ; font-family:Arial; text-align:left;" >
+<DIV id=u104_rtf>&nbsp;</DIV></DIV>
+</DIV>
+<IMG id=u103 src="Resources/transparent.gif" style="position:absolute; left:635px; top:296px; width:205px; height:144px"  >
+
+<span style="position:absolute; left:642px; top:305px; width:190px; height:25px">
+<IMG id=ou105 src="Signup_files/u105.gif" style="position:absolute;left:0px;top:0px;width:190px;height:25px">
+</span>
+<IMG id=u105 src="Resources/transparent.gif" style="position:absolute; left:642px; top:305px; width:190px; height:25px"   >
+
+<span style="position:absolute; left:647px; top:340px; width:30px; height:16px">
+<IMG id=ou106 src="Signup_files/u106.gif" style="position:absolute;left:0px;top:0px;width:30px;height:16px">
+</span>
+<IMG id=u106 src="Resources/transparent.gif" style="position:absolute; left:647px; top:340px; width:30px; height:16px"   >
+
+<DIV id=u107 style="position:absolute; left:677px; top:338px; width:150px; height:16px; ; ; text-align: left ; font-family:Arial; text-align:left;" >
+<DIV id=u107_rtf><span style=" font-family:'Arial'; color:#000000; font-size:10pt;">Request feature</span></DIV></DIV>
+<DIV id=u108 style="position:absolute; left:677px; top:359px; width:150px; height:16px; ; ; text-align: left ; font-family:Arial; text-align:left;" >
+<DIV id=u108_rtf><span style=" font-family:'Arial'; color:#000000; font-size:10pt;">Did you find any problem?</span></DIV></DIV>
+<DIV id=u109 style="position:absolute; left:677px; top:381px; width:150px; height:16px; ; ; text-align: left ; font-family:Arial; text-align:left;" >
+<DIV id=u109_rtf><span style=" font-family:'Arial'; color:#000000; font-size:10pt;">Random Thoughts</span></DIV></DIV>
+<DIV id=u110 style="position:absolute; left:677px; top:414px; width:130px; height:16px; ; ; text-align: left ; font-family:Arial; text-align:left;" >
+<DIV id=u110_rtf><span style=" color:#0000FF; font-size:10pt;"><u><%=link_to "Send your feedback", home_feed_path %></u></span></DIV></DIV>
+<DIV id=ou111 style="position:absolute; left:640px; top:464px; width:206px; height:61px;; overflow:visible">
+
+<span style="position:absolute; left:-3px; top:-3px; width:214px; height:69px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='Signup_files/u111.png',sizingMethod='scale');
+"><img style="width:214px; height:69px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="Signup_files/u111.png" border="0" alt=""></span>
+
+</DIV>
+<DIV id=u111container style="position:absolute; left:640px; top:464px; width:206px; height:61px;; overflow:visible">
+
+<DIV id=u112 style="position:absolute; left:2px; top:22px; width:201px; height:16px; ; ; text-align: center ; font-family:Arial; text-align:left;" >
+<DIV id=u112_rtf><div style="text-align:center"><span style=" color:#000000; font-size:10pt;">Google Ads here</span></div></DIV></DIV>
+</DIV>
+<IMG id=u111 src="Resources/transparent.gif" style="position:absolute; left:640px; top:464px; width:205px; height:60px"  >
+</body>
+</html>

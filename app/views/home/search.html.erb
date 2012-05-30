@@ -1,0 +1,44 @@
+<% if @user.present? %>
+
+
+
+
+
+<br><br><br><br><br>
+<h1>Congrats your Searches are Found</h1>
+
+
+
+
+
+<table border=1>
+   <tr>
+	<th>Member Name</th>
+	<th>Member Image</th> 
+	
+   </tr>
+   <tr>	
+
+	<td><%=@user.first_name%></td>
+	<td><%= image_tag @user.avatar.url(:thumb)%></td>
+	
+   </tr>
+</table>
+<br><br><br>
+
+
+
+<% else %>
+
+
+<br><br><br><br><br><br><br><br><br><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <h1>No Searches are Found</h1>
+
+<% end %>
+
+
+
+
+
+

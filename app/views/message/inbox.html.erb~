@@ -1,0 +1,45 @@
+<br/><br/><br/><br/> 
+
+
+<h3> Incoming meeting Request</h3>
+<div>
+<ul>
+<li><%= link_to  'Inbox',inbox_path %></li>
+ <li><%= link_to 'Outbox',outbox_path %></li>
+</ul>
+ </div>
+
+<div>
+<% if @message.present? %>
+<table class="curvedEdges" border="1">
+<tr>
+<th>From</th>
+<th>Meeting purpose</th>
+<th>Date Received</th>
+
+</tr>
+<% i=0 %>
+	<% @message.each do |q| %>
+       <tr>
+           <td><%=@rec[i]%><br></td>
+	   <td><%=q.subject %><br></td>
+           <td><%=q.created_at%><br></td>
+           <td><br></td>
+       </tr>
+ <% i=i+1 %>
+       <% end %>
+
+
+</table>
+
+
+
+
+<% else %>
+       <p> No inbox message </p>
+<% end %>
+
+
+
+</div>
+

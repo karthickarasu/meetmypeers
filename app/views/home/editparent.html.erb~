@@ -1,0 +1,77 @@
+
+<br><br><br><br><br><br><h2>Personal details</h2>
+<%= form_for:user, :html => { :multipart => true }, :url => {:controller=>'home',:action=>'editparent1'} do |f| %>
+
+<style>
+
+	
+	 input[type=text] { float: right; width: 250px; }
+
+</style>
+<div><%= f.label:FirstName %>
+  <%= f.text_field:first_name %></div><br/>
+
+
+  <div><%= f.label:LastName %>
+  <%= f.text_field:last_name %></div><br/>
+
+<div >
+  <%= f.label:Gender    %>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <%= f.radio_button :gender, 'male' %>
+  <%= f.label :male, 'Male' %>
+  <%= f.radio_button :gender, 'female'%>
+  <%= f.label :female, 'Female'  %>
+</div><br/>
+
+
+  <DIV >
+   <DIV >
+   <span >
+       <script>
+    $(function() {
+        $( "#datepicker" ).datepicker({
+            changeMonth: true,
+            changeYear: true
+        });
+    });
+    </script>
+
+
+
+<div class="demo">
+
+<p>Birthday: <input type="text" id="datepicker"></p>
+
+</div><!-- End demo -->
+   </span>
+   </DIV>
+   </DIV><br/>
+
+ <div><%= f.label:HomeAddress %>
+  <%= f.text_field:addressline1 %></div><br/>
+
+ <div><%= f.label:CityTown %>
+  <%= f.text_field:citytown %></div><br/>
+
+
+
+ <div><%= f.label:Interest %>
+  <%= f.text_field:interest %></div>
+</td>
+</table>
+
+
+<h2>Image Upload</h2>
+<table class="curvedEdges" border="10" cellpadding="15">
+<td>
+      <br/>
+ <br/><div><%= f.label:fileupload %>
+ <%= f.file_field :avatar %></div><br/>
+
+   </td>
+</table>
+<br>
+<br>
+<div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <%= f.submit "Save changes" %></div>
+<% end %>
