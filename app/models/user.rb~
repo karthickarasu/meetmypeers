@@ -2,7 +2,7 @@ class User < ActiveRecord::Base
 has_many :messages
   # Include default devise modules. Others available are:
   # :token_authenticatable, :encryptable, :confirmable, :lockable, :timeoutable and :omniauthable
-apply_simple_captcha
+
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
@@ -19,5 +19,5 @@ apply_simple_captcha
 #validates_file_presence :avatar 
 #validates_file_size :avatar, :less_than => 1.megabytes, :message => 'file size maximum 1 MB allowed' #validates_file_content_type :avatar, :content_type => ['avatar/jpeg', 'avatar/png', 'avatar/gif', 'avatar/bmp', 'avatar/pjpeg', 'avatar/x-png']
 
-  apply_simple_captcha :message => "The secret Image and code were different", :add_to_base => true
+
 end
