@@ -1,6 +1,6 @@
 class RegistrationsController < Devise::RegistrationsController
  
-validates simple_captcha
+#validates simple_captcha
 def new
     resource = build_resource({})
     respond_with_navigational(resource){ render_with_scope :new }
@@ -14,9 +14,9 @@ def new
 #else
  # do that
 #end
-@user.valid_with_captcha?
+#@user.valid_with_captcha?
 
-@user.save_with_captcha
+#@user.save_with_captcha
 
 
  @user = User.create( params[:user] )
