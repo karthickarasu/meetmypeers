@@ -9,11 +9,11 @@ def new
   # POST /resource
   def create
     build_resource
-if simple_captcha_valid?
- do this
-else
-  do that
-end
+#if simple_captcha_valid?
+# do this
+#else
+ # do that
+#end
 @user.valid_with_captcha?
 
 @user.save_with_captcha
