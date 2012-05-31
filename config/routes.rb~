@@ -52,12 +52,12 @@ match 'home/profile1' => 'home#profile1'
 
   #match 'fb' => 'fb#fb'
 
-#devise_for :users do
-  #get '/users/sign_out' => 'devise/sessions#destroy'
-  #get 'home/search' => 'devise/home#search'
+devise_for :users do
+  get '/users/sign_out' => 'devise/sessions#destroy'
+  get 'home/search' => 'devise/home#search'
   
-#get '/users/sign_out' => 'users#signin'
-#end
+get '/users/sign_out' => 'users#signin'
+end
 
 devise_for :users, :controllers => {:registrations => "registrations"}
 
