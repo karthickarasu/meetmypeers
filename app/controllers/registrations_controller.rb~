@@ -22,7 +22,7 @@ def new
  @user = User.create( params[:user] )
  @user.avatar = nil
  @user.save
-Email.send_mail(@user).deliver  #include this line in your users_controller.rb file
+#Email.send_mail(@user).deliver  #include this line in your users_controller.rb file
     if resource.save
       if resource.active_for_authentication?
         set_flash_message :notice, :signed_up if is_navigational_format?
