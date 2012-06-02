@@ -12,7 +12,7 @@ gem 'devise'
 gem 'jquery-rails'
 gem 'jquery_datepicker'
 gem "galetahub-simple_captcha", :require => "simple_captcha"
-gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
+gem "paperclip", "~> 2.7"
 
 
 gem 'will_paginate', '3.0.pre2'

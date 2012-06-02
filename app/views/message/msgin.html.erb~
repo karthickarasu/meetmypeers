@@ -11,6 +11,7 @@
     <tr>
         <td width="170"><%= time_ago_in_words(@msg.created_at) %> ago</td>
         <td width="325"><%= @msg.message %></td>
+        <%=link_to 'reply',"/reply/#{@msg.id}"%></div>   
     </tr>
 </table>
 <br>

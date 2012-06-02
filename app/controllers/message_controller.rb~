@@ -40,5 +40,14 @@ def inbox
 	def msgin
 		@msg=Message.find_by_id(params[:id])
         end
+
+
+	def reply
+           @rep=Message.find_by_id(params[:id])
+           @sen=@rep.receiver
+           @rec=@rep.sender
+           @user=current_user.id
+           @use=User.find_by_id(@rec)
+         end
 	
 end

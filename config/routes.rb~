@@ -68,6 +68,7 @@ devise_for :users, :controllers => {:registrations => "registrations"}
    match '/outbox'=> 'message#outbox'
    match '/write/:id'=> 'message#write'
    match '/message/sendmessage'=> 'message#sendmessage'
+   match '/message/reply'=> 'message#reply'
 
 #match '/users/edit' => 'registrations#edit'
 

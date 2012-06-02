@@ -16,15 +16,16 @@
 <th>From</th>
 <th>Meeting purpose</th>
 <th>Date Received</th>
+<th>Reply</th>
 
 </tr>
 <% i=0 %>
 	<% @message.each do |q| %>
        <tr>
            <td><%=@rec[i]%><br></td>
-	   <td><%=q.subject %><br></td>
+	   <td><%= link_to q.subject,"/msgin/#{p.id}" %><br></td>
            <td><%=q.created_at%><br></td>
-           <td><br></td>
+           <td></td>
        </tr>
  <% i=i+1 %>
        <% end %>
