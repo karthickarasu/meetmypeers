@@ -33,11 +33,4 @@
 
 
 
-<% else %>
-       <p> No inbox message </p>
-<% end %>
-
-
-
-</div>
 
