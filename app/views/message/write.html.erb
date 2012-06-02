@@ -14,24 +14,17 @@
                   
 		</tr>
 
-		 <tr>
-
-			<td><%=f.label :FirstName,"FirstName"%></td><br>                     
-			<td><%=@receiver.first_name %></td><br>
-		 </tr>	
-
-
-               <tr>
-		       <td><%=f.label :subject,"Location"%></td>                        
+		<tr>
+		       <td><%=f.label :subject,"Subject"%></td>                        
                        <td><%=f.text_field :subject %></td>
 		</tr>
                <tr>
-                       <td><%=f.label :message,"Metting purpose"%></td>                        
+                       <td><%=f.label :message,"Message"%></td>                        
                        <td><%=f.text_area :message, :size => '5x5'%></td>
                </tr>
                <tr>
                        <td></td><td></td><td></td> 
                        <td colspan=3><%=f.submit 'Send Message'%></td>
                </tr>
-       <%end%>
+       <% end %>
  </table>
