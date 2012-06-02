@@ -1,11 +1,11 @@
-<h1>Messages</h1>
-<h1>Send message to [<%= @use.first_name %>]</h1>
+<h1>Reply Messages</h1>
+<h1>Send message </h1>
 <table cellspacing=10>
-       <%=form_for :message, :url=>{:action=>"sendmessage", :controller=>"messages"} do |f|%>
+       <%=form_for :message, :url=>{:action=>"replymessage", :controller=>"messages"} do |f|%>
                        <tr>
                        <td><%=f.hidden_field :sender, :value=>@sen %></td>
                        <td><%=f.hidden_field :receiver, :value=>@rec %></td>
-                       <td><%= f.hidden_field :user_id, :value =>@user %></td> 
+
                       </tr>
                 	<tr>   
                        <td><%=f.label :subject,"Subject"%></td>                       
