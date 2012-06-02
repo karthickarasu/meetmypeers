@@ -1,16 +1,17 @@
 <br/><br/><br/><br/>
 
-<h3>Outbox Request</h3>
+<br><br>
 <div>
 <ul>
- <li><%= link_to 'Inbox',inbox_path %></li> <li><%= link_to 'Outbox',outbox_path %></li>
+ <li><%= link_to 'Inbox',inbox_path %></li>
+ <li><%= link_to 'Outbox',outbox_path %></li>
 </ul>
  </div>
 <% if @mesg.present? %>
 <table border="1">
 	<tr>
 		<th>To</th>
-		<th>Meeting Purpose</th>
+		<th>Subject</th>
 		<th>Date sent</th>
 	</tr>
 	<% i=0 %>
@@ -21,7 +22,6 @@
 		<td><%=p.created_at%><br></td>
 	</tr>
 	<% i=i+1 %>
-<%= link_to p.subject,"/msgout/#{p.id}" %>
 	<% end %>
 </table>
 <% end %>
