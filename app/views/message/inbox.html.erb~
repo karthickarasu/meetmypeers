@@ -25,7 +25,7 @@
            <td><%=@rec[i]%><br></td>
 	   <td><%= link_to q.subject,"/msgin/#{q.id}" %><br></td>
            <td><%=q.created_at%><br></td>
-           <td><%=link_to 'reply',"/reply/#{@msg.id}"%> </td>
+           <td><%=link_to 'reply',"/reply/#{q.id}"%> </td>
        </tr>
  <% i=i+1 %>
        <% end %>
