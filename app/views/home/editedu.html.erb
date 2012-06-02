@@ -16,6 +16,9 @@
   <br/><br/>
 
 
+<script src="/javascripts/livevalidation_standalone.js"></script>
+
+
  <div><%= f.label:Institution %>
   <%= f.text_field:collegeuniversity %></div><br /><br/>
 
@@ -36,5 +39,25 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
 <%= f.select :state, options_for_select(['Chennai', 'Madurai', 'Combaitore', 'Trichy', 'Salem']) %> </div><br/><br/>
 <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <%= f.submit "Save changes" %></div><br/>
+
+
+
+
+var f1 = new LiveValidation('user_collegeuniversity');
+f1.add( Validate.Presence ); 
+
+var f2 = new LiveValidation('user_major2');
+f2.add( Validate.Presence ); 
+
+var f3 = new LiveValidation('user_addressline1');
+f3.add( Validate.Presence ); 
+
+var f4 = new LiveValidation('user_citytown');
+f4.add( Validate.Presence ); 
+
+var f5 = new LiveValidation('user_major1');
+f5.add( Validate.Presence ); 
+
+
 
 <% end %>
