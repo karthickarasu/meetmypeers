@@ -9,7 +9,6 @@ def feedback
        @user.update_attributes(params[:user])
             redirect_to '/home/profilepage'
 
-
 end
 
 

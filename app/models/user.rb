@@ -9,7 +9,9 @@ has_many :messages
 
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me, :avatar, :first_name, :last_name, :gender, :addressline1, :major1, :title, :fullname, :comment, :subject
-  has_attached_file :avatar,  :default_url => "/images/images.jpg",:styles => { :medium => "300x300", :thumb => "100x100" }
+  has_attached_file :avatar,  :default_url => "/images/images.jpg",:styles => { :medium => "300x300", :thumb => "100x100" },
+      :storage => :s3,
+     :s3_credentials => "#{RAILS_ROOT}/config/s3.yml"
 
  #validates_presence_of  :first_name,:last_name,:addressline1,:addressline2,:major1,:title,:fullname, :comment, :subject, :citytown, :interest
 				

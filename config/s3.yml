@@ -1,0 +1,8 @@
+development:
+  bucket: meet_dev
+  access_key_id: AKIAIL6KWD2DJDXNGQLQ
+  secret_access_key: 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
+production:
+  bucket: meet_pro
+  access_key_id: AKIAIL6KWD2DJDXNGQLQ
+  secret_access_key: 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
