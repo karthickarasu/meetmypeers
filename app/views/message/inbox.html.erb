@@ -14,7 +14,7 @@
 <table class="curvedEdges" border="1">
 <tr>
 <th>From</th>
-<th>Meeting purpose</th>
+<th>subject</th>
 <th>Date Received</th>
 <th>Reply</th>
 
@@ -23,9 +23,9 @@
 	<% @message.each do |q| %>
        <tr>
            <td><%=@rec[i]%><br></td>
-	   <td><%= link_to q.subject,"/msgin/#{p.id}" %><br></td>
+	   <td><%= link_to q.subject,"/msgin/#{q.id}" %><br></td>
            <td><%=q.created_at%><br></td>
-           <td></td>
+           <td><%=link_to 'reply',"/reply/#{@msg.id}"%> </td>
        </tr>
  <% i=i+1 %>
        <% end %>
