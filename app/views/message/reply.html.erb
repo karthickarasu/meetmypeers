@@ -1,7 +1,7 @@
 <h1>Reply Messages</h1>
 
 <table cellspacing=10>
-       <%=form_for :message, :url=>{:action=>"reply", :controller=>"messages"} do |f|%>
+       <%=form_for :message, :url=>{:action=>"sendmessage", :controller=>"messages"} do |f|%>
                        <tr>
                        <td><%=f.hidden_field :sender, :value=>@sen %></td>
                        <td><%=f.hidden_field :receiver, :value=>@rec %></td>
