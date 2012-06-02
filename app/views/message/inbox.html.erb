@@ -1,19 +1,23 @@
 <br/><br/><br/><br/> 
 
-<br><br>
+
+<h3> Incoming meeting Request</h3>
 <div>
 <ul>
- <li><%= link_to 'Inbox',inbox_path %></li>
+<li><%= link_to  'Inbox',inbox_path %></li>
  <li><%= link_to 'Outbox',outbox_path %></li>
 </ul>
  </div>
+
 <div>
 <% if @message.present? %>
-<table border="1">
+<table class="curvedEdges" border="1">
 <tr>
 <th>From</th>
-<th>Subject</th>
+<th>subject</th>
 <th>Date Received</th>
+<th>Reply</th>
+
 </tr>
 <% i=0 %>
 	<% @message.each do |q| %>
@@ -21,16 +25,22 @@
            <td><%=@rec[i]%><br></td>
 	   <td><%= link_to q.subject,"/msgin/#{q.id}" %><br></td>
            <td><%=q.created_at%><br></td>
+           <td><%=link_to 'reply',"/reply/#{@msg.id}"%> </td>
        </tr>
  <% i=i+1 %>
        <% end %>
+
+
 </table>
+
+
+
+
 <% else %>
        <p> No inbox message </p>
 <% end %>
+
+
+
 </div>
-
-
-
-
 
