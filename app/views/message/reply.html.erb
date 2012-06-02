@@ -4,7 +4,7 @@
        <%=form_for :message, :url=>{:action=>"replymessage", :controller=>"messages"} do |f|%>
                        <tr>
                        <td><%=f.hidden_field :sender, :value=>@sen %></td>
-                       <td><%=f.hidden_field :receiver, :value=>@rec %></td>
+                       <td><%=f.hidden_field :receiver, :value=>@rec.id %></td>
 
                       </tr>
                 	<tr>   
