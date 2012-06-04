@@ -183,7 +183,7 @@ src="images/profile page_files/u29.png" border="0" alt=""></span>
 <IMG id=u30 src="/Resources/transparent.gif" style="position:absolute; left:48px; top:943px; width:269px; height:19px" >
 
 <DIV  style="position:absolute; left:46px; top:1046px; width:269px; height:16px; ; ; text-align: left ; font-family:Arial; text-align:left;" >
-<DIV id=u31_rtf><span style=" font-family:'Arial'; color:#000000; font-size:10pt;"><b><%= @user.institution %></b></span></DIV></DIV>
+<DIV id=u31_rtf><span style=" font-family:'Arial'; color:#000000; font-size:10pt;"><b><%= @user.collegeuniversity %></b></span></DIV></DIV>
 <IMG id=u31 src="//Resources/transparent.gif" style="position:absolute; left:46px; top:1046px; width:269px; height:16px" >
 
 <DIV  style="position:absolute; left:49px; top:1100px; width:273px; height:18px; ; ; text-align: left ; font-family:Arial; text-align:left;" >
