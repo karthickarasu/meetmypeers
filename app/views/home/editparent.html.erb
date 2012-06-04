@@ -10,6 +10,9 @@
 </style>
 
 
+<script src="/javascripts/livevalidation_standalone.js"></script>
+
+
 
 
 
@@ -83,7 +86,24 @@
 <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <%= f.submit "Save changes" %></div>
 
 
+<script>
 
+var f1 = new LiveValidation('user_first_name');
+f1.add( Validate.Presence ); 
+
+var f2 = new LiveValidation('user_last_name');
+f2.add( Validate.Presence ); 
+
+var f3 = new LiveValidation('user_avatar');
+f3.add( Validate.Presence ); 
+
+var f4 = new LiveValidation('user_citytown');
+f4.add( Validate.Presence ); 
+
+var f5 = new LiveValidation('user_addressline1');
+f5.add( Validate.Presence ); 
+
+</script>
 
 
 

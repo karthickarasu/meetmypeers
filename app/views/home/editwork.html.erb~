@@ -17,7 +17,7 @@
 
   <br/><br/>
 
-
+<script src="/javascripts/livevalidation_standalone.js"></script>
 
 
  <br/><div><%= f.label:Companyname %>
@@ -48,7 +48,7 @@
   <%= f.text_field:citytown %></div><br />
 <div><%= f.label:State  %>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-<%= f.select :state, options_for_select(['Chennai', 'Madurai', 'Combaitore', 'Trichy', 'Salem']) %> </div><br/>
+<%= f.select :state, options_for_select(['Tamilnadu', 'kerala', 'karanataka', 'pondichery', 'andhra']) %> </div><br/>
  
   
 <div><%= f.label:Descripition %>

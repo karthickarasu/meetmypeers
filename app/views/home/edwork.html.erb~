@@ -62,6 +62,8 @@
 
 <br />
 
+<script>
+
 var f1 = new LiveValidation('user_companyname');
 f1.add( Validate.Presence ); 
 
@@ -77,7 +79,7 @@ f4.add( Validate.Presence );
 var f5 = new LiveValidation('user_title');
 f5.add( Validate.Presence ); 
 
-
+</script>
 
 
 

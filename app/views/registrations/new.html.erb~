@@ -1,7 +1,16 @@
-<h2>Sign up</h2>
+<h2>Sign up Form</h2>
 
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
+
+<script src="/javascripts/livevalidation_standalone.js"></script>
+
+<style>
+
+	
+	 input[type=text] { float: right; width: 250px; }
+
+</style>
 
   <div><%= f.label :email %><br />
   <%= f.email_field :email %></div>
@@ -35,6 +44,7 @@
   <DIV >
    <DIV >
    <span >
+<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/redmond/jquery-ui.css"">
        <script>
     $(function() {
         $( "#datepicker" ).datepicker({
@@ -61,6 +71,17 @@
 </div>
 
   <div><%= f.submit "Sign up" %></div>
+
+<script>
+
+var f1 = new LiveValidation('user_first_name');
+f1.add( Validate.Presence ); 
+
+var f2 = new LiveValidation('user_last_name');
+f2.add( Validate.Presence ); 
+
+
+</script>
 <% end %>
 <%= render :partial => "devise/shared/links" %>
 

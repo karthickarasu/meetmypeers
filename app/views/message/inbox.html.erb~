@@ -16,7 +16,7 @@
 <th>From</th>
 <th>subject</th>
 <th>Date Received</th>
-<th>Reply</th>
+
 
 </tr>
 <% i=0 %>
