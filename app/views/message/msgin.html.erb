@@ -1,5 +1,5 @@
 
-<br><br>
+<br/><br/><br/><br/><br/><br/>
 <div id=menu>
 <ul>
  <li><%= link_to 'Inbox',inbox_path %></li>
@@ -11,7 +11,7 @@
     <tr>
         <td width="170"><%= time_ago_in_words(@msg.created_at) %> ago</td>
         <td width="325"><%= @msg.message %></td>
-        <%=link_to 'reply',"/reply/#{@msg.id}"%></div>   
+        <%=link_to 'Reply',"/reply/#{@msg.id}"%></div>   
     </tr>
 </table>
 <br>

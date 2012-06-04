@@ -39,7 +39,6 @@
    <li><a href='#'><span>My peers</span></a>
       <ul>
          <li><%=link_to "Peers list",home_peer_path %></li>
-         <li><a href='#'><span>Location list</span></a></li>
 	<li><span><%= link_to "Add Education", home_new_path %></span></li>
 	  <li><span><%= link_to "Edit Education", home_editedu_path %></span></li>
 	  <li><span><%= link_to "view Education", home_viewedu_path %></span></li>
@@ -47,8 +46,8 @@
    </li>
    <li><a href='#'><span>Meetings</span></a>
 <ul>
-         <li><a href='#'><span>Scheduled meetings</span></a></li>
-         <li><a href='#'><span>Meeting Request</span></a></li>
+         <li><span><%=link_to "Meeting request",inbox_path %></span></li>
+         <li><span><%=link_to "Outbox request",outbox_path %></span></li>
       </ul>
 </li>
   
