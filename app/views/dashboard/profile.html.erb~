@@ -92,7 +92,7 @@ src="images/profile page_files/u6.png" border="0" alt=""></span>
 <DIV id=u9 style="position:absolute; left:167px; top:267px; width:197px; height:22px; ; ; text-align: left ; font-family:Arial; text-align:left;" >
 <DIV id=u9_rtf><span style=" color:#000000; font-size:14pt;"><b><%= @user.first_name %></b></span></DIV></DIV>
 <DIV id=u10 style="position:absolute; left:167px; top:300px; width:80px; height:19px; ; ; text-align: left ; font-family:Arial; text-align:left;" >
-<DIV id=u10_rtf><span style=" font-family:'Arial'; color:#000000; font-size:12pt;"><b><td><%= @user.last_name %>&nbsp;&nbsp; 45</b></span></DIV></DIV>
+<DIV id=u10_rtf><span style=" font-family:'Arial'; color:#000000; font-size:12pt;"><b><td><%= @user.last_name %></b></span></DIV></DIV>
 <DIV id=u11 style="position:absolute; left:167px; top:330px; width:127px; height:19px; ; ; text-align: left ; font-family:Arial; text-align:left;" >
 <DIV id=u11_rtf><span style=" font-family:'Arial'; color:#000000; font-size:12pt;"><b><%= @user.citytown %>, <%= @user.state %></b></span></DIV></DIV>
 <DIV id=u12 style="position:absolute; left:167px; top:365px; width:150px; height:16px; ; ; text-align: left ; font-family:Arial; text-align:left;" >
@@ -117,7 +117,7 @@ src="images/profile page_files/u14.png" border="0" alt=""></span>
 
 
 <DIV  style="position:absolute; left:34px; top:668px; width:366px; height:19px; ; ; text-align: left ; font-family:Arial; text-align:left;" >
-<DIV id=u16_rtf><span style=" font-family:'Arial'; color:#000000; font-size:12pt;"><b>Account Manager -- Google Inc.&nbsp; ( Years of Exp )</b></span></DIV></DIV>
+<DIV id=u16_rtf><span style=" font-family:'Arial'; color:#000000; font-size:12pt;"><b><%= @user.companyname %></b></span></DIV></DIV>
 
 
 <span style="position:absolute; left:24px; top:730px; width:565px; height:5px; ;
@@ -128,17 +128,17 @@ src="images/profile page_files/u17.png" border="0" alt=""></span>
 
 
 <DIV id=u18 style="position:absolute; left:41px; top:637px; width:230px; height:16px; ; ; text-align: left ; font-family:Arial; text-align:left;" >
-<DIV id=u18_rtf><span style=" font-family:'Arial'; color:#000000; font-size:10pt;"><b>21/02/05 -- Currently working</b></span></DIV></DIV>
+<DIV id=u18_rtf><span style=" font-family:'Arial'; color:#000000; font-size:10pt;"><b><%= @user.jobcategory %>Currently working</b></span></DIV></DIV>
 <DIV id=u19 style="position:absolute; left:34px; top:700px; width:150px; height:16px; ; ; text-align: left ; font-family:Arial; text-align:left;" >
 <DIV id=u19_rtf><span style=" font-family:'Arial'; color:#999999; font-size:10pt;">Description goes here...</span></DIV></DIV>
 <DIV  style="position:absolute; left:34px; top:774px; width:336px; height:19px; ; ; text-align: left ; font-family:Arial; text-align:left;" >
-<DIV id=u20_rtf><span style=" font-family:'Arial'; color:#000000; font-size:12pt;"><b>Account Manager -- Google Inc.&nbsp; ( 1 Year )</b></span></DIV></DIV>
+<DIV id=u20_rtf><span style=" font-family:'Arial'; color:#000000; font-size:12pt;"><b><%= @user.totalyearofexperience %></b></span></DIV></DIV>
 <IMG id=u20 src="/Resources/transparent.gif" style="position:absolute; left:34px; top:774px; width:336px; height:19px" >
 
 <DIV id=u21 style="position:absolute; left:41px; top:747px; width:230px; height:16px; ; ; text-align: left ; font-family:Arial; text-align:left;" >
-<DIV id=u21_rtf><span style=" font-family:'Arial'; color:#000000; font-size:10pt;"><b>21/02/04 -- 21/02/04</b></span></DIV></DIV>
+<DIV id=u21_rtf><span style=" font-family:'Arial'; color:#000000; font-size:10pt;"><b></b></span></DIV></DIV>
 <DIV id=u22 style="position:absolute; left:34px; top:808px; width:150px; height:16px; ; ; text-align: left ; font-family:Arial; text-align:left;" >
-<DIV id=u22_rtf><span style=" font-family:'Arial'; color:#999999; font-size:10pt;">Description goes here...</span></DIV></DIV>
+<DIV id=u22_rtf><span style=" font-family:'Arial'; color:#999999; font-size:10pt;"></span></DIV></DIV>
 <span style="position:absolute; left:24px; top:837px; width:565px; height:5px; ;
 filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/profile page_files/u23.png',sizingMethod='scale');
 "><img style="width:565px; height:5px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
@@ -162,11 +162,11 @@ src="images/profile page_files/u24.png" border="0" alt=""></span>
 
 
 <DIV  style="position:absolute; left:46px; top:917px; width:248px; height:16px; ; ; text-align: left ; font-family:Arial; text-align:left;" >
-<DIV id=u26_rtf><span style=" font-family:'Arial'; color:#000000; font-size:10pt;"><b>20/01/05 -- Currently Studying</b></span></DIV></DIV>
+<DIV id=u26_rtf><span style=" font-family:'Arial'; color:#000000; font-size:10pt;"><b><%= @user.institution %></b></span></DIV></DIV>
 
 
 <DIV  style="position:absolute; left:49px; top:971px; width:273px; height:18px; ; ; text-align: left ; font-family:Arial; text-align:left;" >
-<DIV id=u27_rtf><span style=" font-family:'Arial'; color:#000000; font-size:11pt;"><b>M.S. University, California</b></span></DIV></DIV>
+<DIV id=u27_rtf><span style=" font-family:'Arial'; color:#000000; font-size:11pt;"><b><%= @user.major1 %></b></span></DIV></DIV>
 <IMG id=u27 src="//Resources/transparent.gif" style="position:absolute; left:49px; top:971px; width:273px; height:18px" >
 
 <DIV id=u28 style="position:absolute; left:48px; top:999px; width:150px; height:16px; ; ; text-align: left ; font-family:Arial; text-align:left;" >
@@ -179,21 +179,21 @@ src="images/profile page_files/u29.png" border="0" alt=""></span>
 <IMG id=u29 src="//Resources/transparent.gif" style="position:absolute; left:23px; top:1032.5px; width:562px; height:2px">
 
 <DIV  style="position:absolute; left:48px; top:943px; width:269px; height:19px; ; ; text-align: left ; font-family:Arial; text-align:left;" >
-<DIV id=u30_rtf><span style=" font-family:'Arial'; color:#000000; font-size:12pt;"><b>Computer Science</b></span></DIV></DIV>
+<DIV id=u30_rtf><span style=" font-family:'Arial'; color:#000000; font-size:12pt;"><b><%= @user.major2 %></b></span></DIV></DIV>
 <IMG id=u30 src="/Resources/transparent.gif" style="position:absolute; left:48px; top:943px; width:269px; height:19px" >
 
 <DIV  style="position:absolute; left:46px; top:1046px; width:269px; height:16px; ; ; text-align: left ; font-family:Arial; text-align:left;" >
-<DIV id=u31_rtf><span style=" font-family:'Arial'; color:#000000; font-size:10pt;"><b>20/01/05 -- Currently Studying</b></span></DIV></DIV>
+<DIV id=u31_rtf><span style=" font-family:'Arial'; color:#000000; font-size:10pt;"><b><%= @user.institution %></b></span></DIV></DIV>
 <IMG id=u31 src="//Resources/transparent.gif" style="position:absolute; left:46px; top:1046px; width:269px; height:16px" >
 
 <DIV  style="position:absolute; left:49px; top:1100px; width:273px; height:18px; ; ; text-align: left ; font-family:Arial; text-align:left;" >
-<DIV id=u32_rtf><span style=" font-family:'Arial'; color:#000000; font-size:11pt;"><b>M.S. University, California</b></span></DIV></DIV>
+<DIV id=u32_rtf><span style=" font-family:'Arial'; color:#000000; font-size:11pt;"><b><%= @user.addressline1 %></b></span></DIV></DIV>
 <IMG id=u32 src="/Resources/transparent.gif" style="position:absolute; left:49px; top:1100px; width:273px; height:18px" >
 
 <DIV id=u33 style="position:absolute; left:48px; top:1128px; width:150px; height:16px; ; ; text-align: left ; font-family:Arial; text-align:left;" >
-<DIV id=u33_rtf><span style=" font-family:'Arial'; color:#999999; font-size:10pt;">Description goes here...</span></DIV></DIV>
+<DIV id=u33_rtf><span style=" font-family:'Arial'; color:#999999; font-size:10pt;"><%= @user.description %></span></DIV></DIV>
 <DIV  style="position:absolute; left:48px; top:1072px; width:269px; height:19px; ; ; text-align: left ; font-family:Arial; text-align:left;" >
-<DIV id=u34_rtf><span style=" font-family:'Arial'; color:#000000; font-size:12pt;"><b>Computer Science</b></span></DIV></DIV>
+<DIV id=u34_rtf><span style=" font-family:'Arial'; color:#000000; font-size:12pt;"><b><%= @user.state %></b></span></DIV></DIV>
 <IMG id=u34 src="/Resources/transparent.gif" style="position:absolute; left:48px; top:1072px; width:269px; height:19px" >
 
 <span style="position:absolute; left:22px; top:1157px; width:565px; height:5px; ;
