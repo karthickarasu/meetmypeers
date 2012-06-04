@@ -19,23 +19,23 @@
 <script src="/javascripts/livevalidation_standalone.js"></script>
 
 
- <div><%= f.label:Institution * %>
+ <div><%= f.label:Institution  %>
   <%= f.text_field:collegeuniversity %></div><br /><br/>
 
 
- <div><%= f.label:major1 * %>
+ <div><%= f.label:major1  %>
   <%= f.text_field:major1 %></div><br/><br/>
 
- <div><%= f.label:major2 * %>
+ <div><%= f.label:major2  %>
   <%= f.text_field:major2 %></div><br/><br/>
 
- <div><%= f.label:HomeAddress * %>
+ <div><%= f.label:HomeAddress  %>
   <%= f.text_field:addressline1 %></div><br/><br/>
 
- <div><%= f.label:CityTown * %>
+ <div><%= f.label:CityTown  %>
   <%= f.text_field:citytown %></div><br/><br/>
 
-<div><%= f.label:State * %>
+<div><%= f.label:State  %>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
 <%= f.select :state, options_for_select(['Chennai', 'Madurai', 'Combaitore', 'Trichy', 'Salem']) %> </div><br/><br/>
 <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <%= f.submit "Save changes" %></div><br/>
