@@ -1,5 +1,12 @@
 class User < ActiveRecord::Base
 has_many :messages
+
+
+has_many :friendships
+has_many :inverse_friendships, :class_name => "Friendship", :foreign_key => "friend_id"
+has_many :inverse_friends, :through => :inverse_friendships, :source => :user
+	
+ 
   # Include default devise modules. Others available are:
   # :token_authenticatable, :encryptable, :confirmable, :lockable, :timeoutable and :omniauthable
 
@@ -10,7 +17,7 @@ has_many :messages
 
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me, :avatar, :first_name, :last_name, :gender, :addressline1, :major1, :title, :fullname, :comment, :subject, :major2, :companyname, :jobcategory, :description, :jobstart, :jobend, :state    
+  attr_accessible :email, :password, :password_confirmation, :remember_me, :avatar, :first_name, :last_name, :gender, :addressline1, :major1, :title, :fullname, :comment, :subject, :major2, :companyname, :jobcategory, :description, :jobstart, :jobend, :state, :fromdate, :todate, :fromtime, :totime, :day, :id, :from_time, :to_time, :days,:youremail,:website,:category,:comment
   has_attached_file :avatar,  :default_url => "/images/images.jpg",:styles => { :medium => "300x300", :thumb => "100x100" },
       :storage => :s3,
      :s3_credentials => "#{RAILS_ROOT}/config/s3.yml"

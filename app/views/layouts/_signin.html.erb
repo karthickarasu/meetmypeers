@@ -16,13 +16,21 @@
    ol li {margin: 0 0 15px 0;}
 </style>
 <link href="/menu_assets/styles.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+div.ex
+{
+width:220px;
+padding:10px;
+border:5px solid gray;
+margin:0px;
+}
+</style>
 
 </head>
 
 <body>
 
 <h2><%= image_tag("u1.gif", :alt => "u1 feed") %></h2>
-
 
 <span class='cssmenu'>
 <ul>
@@ -38,6 +46,9 @@
 </li>
    <li><a href='#'><span>My peers</span></a>
       <ul>
+	   <li>  <%= link_to "List of My peers",friendship_mypeer_path %>  </li>
+	   <li>  <%= link_to "Friend request",'/friendships/friend_show' %>  </li>
+
          <li><%=link_to "Peers list",home_peer_path %></li>
 	<li><span><%= link_to "Add Education", home_new_path %></span></li>
 	  <li><span><%= link_to "Edit Education", home_editedu_path %></span></li>
@@ -48,6 +59,8 @@
 <ul>
          <li><span><%=link_to "Meeting request",inbox_path %></span></li>
          <li><span><%=link_to "Outbox request",outbox_path %></span></li>
+         <li><span><%=link_to "Availability",fb_new_path %></span></li>
+         <li><span><%=link_to "View Availability",fb_viewtime_path %></span></li>
       </ul>
 </li>
   
@@ -103,9 +116,9 @@ src="Home--Dashboard_files/u8.png" border="0" alt=""></span>
 <DIV id=u86 style="position:absolute; left:17px; top:1300px; width:140px; height:16px; ; ; text-align: left ; font-family:Arial; text-align:left;" >
 <DIV id=u86_rtf><span style=" font-family:'Arial'; color:#0000FF; font-size:10pt;"><u><%=link_to "AboutMeetmypeers",static_aboutus_path %></u></span></DIV></DIV>
 <span style="position:absolute; left:139px; top:989px; width:5px; height:21px; ;
-filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='Signup_files/u87.png',sizingMethod='scale');
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/Signup_files/u87.png',sizingMethod='scale');
 "><img style="width:5px; height:21px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
-src="Signup_files/u87.png" border="0" alt=""></span>
+src="/images/Signup_files/u87.png" border="0" alt=""></span>
 
 <IMG id=u87 src="Resources/transparent.gif" style="position:absolute; left:138.5px; top:989px; width:2px; height:18px">
 
@@ -114,9 +127,9 @@ src="Signup_files/u87.png" border="0" alt=""></span>
 <DIV id=u89 style="position:absolute; left:148px; top:1300px; width:40px; height:16px; ; ; text-align: left ; font-family:Arial; text-align:left;" >
 <DIV id=u89_rtf><span style=" font-family:'Arial'; color:#0000FF; font-size:10pt;"><u><%=link_to "Legal",static_legal_path %></u></span></DIV></DIV>
 <span style="position:absolute; left:188px; top:989px; width:5px; height:21px; ;
-filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='Signup_files/u90.png',sizingMethod='scale');
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/Signup_files/u90.png',sizingMethod='scale');
 "><img style="width:5px; height:21px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
-src="Signup_files/u90.png" border="0" alt=""></span>
+src="/images/Signup_files/u90.png" border="0" alt=""></span>
 
 <IMG id=u90 src="Resources/transparent.gif" style="position:absolute; left:187.5px; top:989px; width:2px; height:18px">
 
@@ -125,9 +138,9 @@ src="Signup_files/u90.png" border="0" alt=""></span>
 <DIV id=ou92 style="position:absolute; left:632px; top:140px; width:206px; height:131px;; overflow:visible">
 
 <span style="position:absolute; left:-3px; top:-3px; width:214px; height:139px; ;
-filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='Signup_files/u92.png',sizingMethod='scale');
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/Signup_files/u92.png',sizingMethod='scale');
 "><img style="width:214px; height:139px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
-src="Signup_files/u92.png" border="0" alt=""></span>
+src="/images/Signup_files/u92.png" border="0" alt=""></span>
 
 </DIV>
 <DIV id=u92container style="position:absolute; left:632px; top:140px; width:206px; height:131px;; overflow:visible">
@@ -138,7 +151,7 @@ src="Signup_files/u92.png" border="0" alt=""></span>
 <IMG id=u92 src="Resources/transparent.gif" style="position:absolute; left:632px; top:140px; width:205px; height:130px"  >
 
 <span style="position:absolute; left:647px; top:150px; width:29px; height:17px">
-<IMG id=ou94 src="Signup_files/u94.jpg" style="position:absolute;left:0px;top:0px;width:29px;height:17px">
+<IMG id=ou94 src="/images/Signup_files/u94.jpg" style="position:absolute;left:0px;top:0px;width:29px;height:17px">
 </span>
 <IMG id=u94 src="Resources/transparent.gif" style="position:absolute; left:647px; top:150px; width:29px; height:17px"   >
 
@@ -155,7 +168,7 @@ src="Signup_files/u92.png" border="0" alt=""></span>
 <DIV id=u100 style="position:absolute; left:677px; top:200px; width:50px; height:16px; ; ; text-align: left ; font-family:Arial; text-align:left;" >
 <DIV id=u100_rtf><span style=" font-family:'Arial'; color:#000000; font-size:10pt;">on the</span></DIV></DIV>
 <span style="position:absolute; left:647px; top:232px; width:29px; height:17px">
-<IMG id=ou101 src="Signup_files/u101.jpg" style="position:absolute;left:0px;top:0px;width:29px;height:17px">
+<IMG id=ou101 src="/images/Signup_files/u101.jpg" style="position:absolute;left:0px;top:0px;width:29px;height:17px">
 </span>
 <IMG id=u101 src="Resources/transparent.gif" style="position:absolute; left:647px; top:232px; width:29px; height:17px"   >
 
@@ -164,11 +177,12 @@ src="Signup_files/u92.png" border="0" alt=""></span>
 <DIV id=ou103 style="position:absolute; left:635px; top:296px; width:206px; height:145px;; overflow:visible">
 
 <span style="position:absolute; left:-3px; top:-3px; width:214px; height:153px; ;
-filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='Signup_files/u103.png',sizingMethod='scale');
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/Signup_files/u103.png',sizingMethod='scale');
 "><img style="width:214px; height:153px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
-src="Signup_files/u103.png" border="0" alt=""></span>
+src="/images/Signup_files/u103.png" border="0" alt=""></span>
 
 </DIV>
+
 <DIV id=u103container style="position:absolute; left:635px; top:296px; width:206px; height:145px;; overflow:visible">
 
 <DIV id=u104 style="position:absolute; left:2px; top:64px; width:201px; height:16px; ; ; text-align: center ; font-family:Arial; text-align:left;" >
@@ -177,12 +191,12 @@ src="Signup_files/u103.png" border="0" alt=""></span>
 <IMG id=u103 src="Resources/transparent.gif" style="position:absolute; left:635px; top:296px; width:205px; height:144px"  >
 
 <span style="position:absolute; left:642px; top:305px; width:190px; height:25px">
-<IMG id=ou105 src="Signup_files/u105.gif" style="position:absolute;left:0px;top:0px;width:190px;height:25px">
+<IMG id=ou105 src="/images/Signup_files/u105.gif" style="position:absolute;left:0px;top:0px;width:190px;height:25px">
 </span>
 <IMG id=u105 src="Resources/transparent.gif" style="position:absolute; left:642px; top:305px; width:190px; height:25px"   >
 
 <span style="position:absolute; left:647px; top:340px; width:30px; height:16px">
-<IMG id=ou106 src="Signup_files/u106.gif" style="position:absolute;left:0px;top:0px;width:30px;height:16px">
+<IMG id=ou106 src="/images/Signup_files/u106.gif" style="position:absolute;left:0px;top:0px;width:30px;height:16px">
 </span>
 <IMG id=u106 src="Resources/transparent.gif" style="position:absolute; left:647px; top:340px; width:30px; height:16px"   >
 
@@ -197,9 +211,9 @@ src="Signup_files/u103.png" border="0" alt=""></span>
 <DIV id=ou111 style="position:absolute; left:640px; top:464px; width:206px; height:61px;; overflow:visible">
 
 <span style="position:absolute; left:-3px; top:-3px; width:214px; height:69px; ;
-filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='Signup_files/u111.png',sizingMethod='scale');
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/Signup_files/u111.png',sizingMethod='scale');
 "><img style="width:214px; height:69px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
-src="Signup_files/u111.png" border="0" alt=""></span>
+src="/images/Signup_files/u111.png" border="0" alt=""></span>
 
 </DIV>
 <DIV id=u111container style="position:absolute; left:640px; top:464px; width:206px; height:61px;; overflow:visible">

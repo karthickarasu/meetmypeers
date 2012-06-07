@@ -31,6 +31,9 @@ p "gggggggggggggggggggggggggggggggggggggggggg"
       format.xml { render :xml => @home }
     end
 end 
+def show  
+    @user = current_user  
+  end  
 
  def search
   p params[:name]

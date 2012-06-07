@@ -27,14 +27,18 @@ root :to => "users#signin"
   get "hme/destroy"
 
   get "home/peer"
+  
+
+
 
  match 'home/search' => 'home#search'
+ match 'home/show' => 'home#show'
 
   get "registrations/paper"
 
 
-  match 'home/feed' => 'home#feed'
-  match 'home/feedback' => 'home#feedback'
+match 'home/feed' => 'home#feed'
+match 'home/feedback' => 'home#feedback'
 match 'home/create' => 'home#create'
 match 'home/editparent' => 'home#editparent'
 match 'home/editedu' => 'home#editedu'
@@ -48,6 +52,13 @@ match 'home/viewwork' => 'home#viewwork'
 match 'home/viewedu' => 'home#viewedu'
 match 'home/destroy' => 'home#destroy'
 match 'home/profile1' => 'home#profile1'
+match 'fb/new' => 'fb#new'
+match 'fb/create' => 'fb#create'
+match 'fb/viewtime' => 'fb#viewtime'
+match 'friendships/friend_show' => 'friendships#friend_show'
+
+match 'friendship/addfriend/:id' => 'friendships#addfriend'
+match 'friendship/mypeer' => 'friendships#mypeer'
  # get "feedbacks/feedback"
 
   #match 'fb' => 'fb#fb'

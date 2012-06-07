@@ -1,8 +1,7 @@
 <br><br><br><br><br>
 <h3>List of peers</h3>
 <br><br>
-
-
+   
 <% @home.each do |p| %>
 <% unless current_user.id==p.id  %>
 <table border=1>
@@ -15,6 +14,10 @@
    <tr>	
 	<th>Member image</th><td><%= image_tag p.avatar.url(:thumb)%></td>
 	<th>Interests</th>
+<%= link_to "ADD Friends","/friendship/addfriend/#{p.id}" %>  
+<%= link_to "view my Friends",friendship_mypeer_path %>  
+  
+
    </tr>
 </table>
 

@@ -10,7 +10,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120530120642) do
+ActiveRecord::Schema.define(:version => 20120607065928) do
+
+  create_table "friendships", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "friend_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "messages", :force => true do |t|
     t.integer  "sender"
@@ -90,6 +97,15 @@ ActiveRecord::Schema.define(:version => 20120530120642) do
     t.string   "avatar_content_type"
     t.datetime "avatar_updated_at"
     t.string   "avatar_file_name"
+    t.date     "fromdate"
+    t.date     "todate"
+    t.time     "fromtime"
+    t.time     "totime"
+    t.string   "day"
+    t.time     "from_time"
+    t.time     "to_time"
+    t.string   "days"
+    t.string   "youremail"
   end
 
   add_index "users", ["confirmation_token"], :name => "index_users_on_confirmation_token", :unique => true

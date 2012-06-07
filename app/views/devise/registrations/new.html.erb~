@@ -1,40 +1,171 @@
-<h2>Sign up</h2>
+
+
+
+
+<HTML><HEAD><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta http-equiv="imagetoolbar" content="no"><link href="Resources/axurerppage.css" type="text/css" rel="stylesheet"></HEAD><BODY>
+<script type="text/javascript">
+function InitializeSubmenu(submenucontainerid, tablecellroid, tablecellid, fname) { 
+var s = "";
+s = s + "function " + fname + "() { ";
+s = s + "document.getElementById(submenucontainerid).style.visibility='';";
+s = s + "BringToFront(submenucontainerid);";
+s = s + "}";
+if ((index = navigator.userAgent.indexOf("MSIE")) >= 0)
+s = s + "document.getElementById('" + tablecellid + "').attachEvent(\"onmouseover\", " + fname + ");";
+else
+s = s + "document.getElementById('" + tablecellid + "').addEventListener(\"mouseover\", " + fname + ", true);";
+s = s + "document.getElementById(tablecellroid).onclick = function() {";
+s = s + "if( document.createEvent ) {";
+s = s + "var evObj = document.createEvent('MouseEvents');";
+s = s + "evObj.initEvent( 'click', true, false );";
+s = s + "document.getElementById(tablecellid).dispatchEvent(evObj);";
+s = s + "} else if( document.createEventObject ) {";
+s = s + "document.getElementById(tablecellid).fireEvent('onclick');";
+s = s + "}";
+s = s + "}";
+eval(s);
+}
+</script>
 
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email %></div>
+<span style="position:absolute; left:6px; top:135px; width:625px; height:15px">
+<span id=ou0 style="position:absolute;left:0px;top:0px;width:625px;height:15px;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/Signup_files/u0.png',sizingMethod='scale');
+"><img style="width:625px; height:15px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="/images/Signup_files/u0.png" border="0" alt=""></span>
+</span>
+<IMG id=u0 src="Resources/transparent.gif" style="position:absolute; left:6px; top:135px; width:625px; height:15px"   >
 
-  <div><%= f.label :password %><br />
-  <%= f.password_field :password %></div>
+<span style="position:absolute; left:4px; top:888px; width:628px; height:15px">
+<span id=ou1 style="position:absolute;left:0px;top:0px;width:628px;height:15px;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/Signup_files/u1.png',sizingMethod='scale');
+"><img style="width:628px; height:15px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="/images/Signup_files/u1.png" border="0" alt=""></span>
+</span>
+<IMG id=u1 src="Resources/transparent.gif" style="position:absolute; left:4px; top:888px; width:628px; height:15px"   >
 
-  <div><%= f.label :password_confirmation %><br />
-  <%= f.password_field :password_confirmation %></div>
+<span style="position:absolute; left:10px; top:149px; width:5px; height:744px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/Signup_files/u2.png',sizingMethod='scale');
+"><img style="width:5px; height:744px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="/images/Signup_files/u2.png" border="0" alt=""></span>
+
+<IMG id=u2 src="Resources/transparent.gif" style="position:absolute; left:9.5px; top:149px; width:2px; height:741px">
+
+<span style="position:absolute; left:623px; top:148px; width:5px; height:745px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/Signup_files/u3.png',sizingMethod='scale');
+"><img style="width:5px; height:745px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="/images/Signup_files/u3.png" border="0" alt=""></span>
+
+<IMG id=u3 src="Resources/transparent.gif" style="position:absolute; left:622.5px; top:148px; width:2px; height:742px">
+
+<DIV id=u4 style="position:absolute; left:483px; top:191px; width:20px; height:24px; ; ; text-align: left ; font-family:Arial; text-align:left;" >
+<DIV id=u4_rtf><span style=" font-family:'Arial'; color:#FF6600; font-size:16pt;">*</span></DIV></DIV>
+<DIV id=u5 style="position:absolute; left:497px; top:193px; width:120px; height:16px; ; ; text-align: left ; font-family:Arial; text-align:left;" >
+<DIV id=u5_rtf><span style=" font-family:'Arial'; color:#000000; font-size:10pt;">fields are mandatory</span></DIV></DIV>
+<DIV id=ou6 style="position:absolute; left:12px; top:146px; width:611px; height:36px;; overflow:visible">
+
+<span style="position:absolute; left:-3px; top:-3px; width:619px; height:44px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/Signup_files/u6.png',sizingMethod='scale');
+"><img style="width:619px; height:44px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="/images/Signup_files/u6.png" border="0" alt=""></span>
+
+</DIV>
+<DIV id=u6container style="position:absolute; left:12px; top:146px; width:611px; height:36px;; overflow:visible">
+
+<DIV id=u7 style="position:absolute; left:2px; top:9.5px; width:606px; height:16px; ; ; text-align: center ; font-family:Arial; text-align:left;" >
+<DIV id=u7_rtf><span style=" color:#000000; font-size:10pt;">&nbsp; &nbsp;&nbsp; </span><span style=" font-family:'Arial'; color:#000000; font-size:10pt;">Create a Free Member Account</span></DIV></DIV>
+</DIV>
+<IMG id=u6 src="Resources/transparent.gif" style="position:absolute; left:12px; top:146px; width:610px; height:35px"  >
 
 
 
+<DIV id=u8 style="position:absolute; left:45px; top:240px; width:100px; height:16px; ; ; text-align: left ; font-family:Arial; text-align:left;" >
+<DIV id=u8_rtf><span style=" font-family:'Arial'; color:#000000; font-size:10pt;">Email Address</span></DIV></DIV>
+<DIV id=u9 style="position:absolute; left:44px; top:291px; width:70px; height:16px; ; ; text-align: left ; font-family:Arial; text-align:left;" >
+<DIV id=u9_rtf><span style=" font-family:'Arial'; color:#000000; font-size:10pt;">Password</span></DIV></DIV>
+<DIV id=u10 style="position:absolute; left:44px; top:341px; width:100px; height:16px; ; ; text-align: left ; font-family:Arial; text-align:left;" >
+<DIV id=u10_rtf><span style=" font-family:'Arial'; color:#000000; font-size:10pt;">Retype password</span></DIV></DIV>
+ <%= f.email_field :email,:id=>"u11",:style=>"position:absolute; left:152px; top:235px; width:271px; height:25px; ; ; text-align: left ; font-family:'Arial'; font-size: 10pt; color:#000000; font-style:normal; font-weight:normal; text-decoration:none"   %>
 
-  
-  <div><%= f.label:FirstName %><br />
-  <%= f.text_field:first_name %></div>
+  <%= f.password_field :password,:id=>"u12",:style=>"position:absolute; left:152px; top:281px; width:271px; height:25px; ; ; text-align: left ; font-family:'Arial'; font-size: 10pt; color:#000000; font-style:normal; font-weight:normal; text-decoration:none"   %>
 
-  <div><%= f.label:LastName %><br />
-  <%= f.text_field:last_name %></div>
+<%= f.password_field :password_confirmation,:id=>"u13",:style=>"position:absolute; left:152px; top:338px; width:271px; height:25px; ; ; text-align: left ; font-family:'Arial'; font-size: 10pt; color:#000000; font-style:normal; font-weight:normal; text-decoration:none"   %>
 
-<div >
-  <%= f.label:Gender %><br />
-  <%= f.radio_button :gender, 'male' %>
-  <%= f.label :male, 'Male' %>
-  <%= f.radio_button :gender, 'female'%>
-  <%= f.label :female, 'Female'  %>
-</div>
+<DIV id=u14 style="position:absolute; left:34px; top:234px; width:20px; height:24px; ; ; text-align: left ; font-family:Arial; text-align:left;" >
+<DIV id=u14_rtf><span style=" font-family:'Arial'; color:#FF6600; font-size:16pt;">*</span></DIV></DIV>
+<DIV id=u15 style="position:absolute; left:32px; top:285px; width:20px; height:24px; ; ; text-align: left ; font-family:Arial; text-align:left;" >
+<DIV id=u15_rtf><span style=" font-family:'Arial'; color:#FF6600; font-size:16pt;">*</span></DIV></DIV>
+<DIV id=u16 style="position:absolute; left:32px; top:339px; width:20px; height:24px; ; ; text-align: left ; font-family:Arial; text-align:left;" >
+<DIV id=u16_rtf><span style=" font-family:'Arial'; color:#FF6600; font-size:16pt;">*</span></DIV></DIV>
+<span style="position:absolute; left:432px; top:235px; width:23px; height:23px">
+<IMG id=ou17 src="/images/Signup_files/u17.gif" style="position:absolute;left:0px;top:0px;width:23px;height:23px">
+</span>
+<IMG id=u17 src="Resources/transparent.gif" style="position:absolute; left:432px; top:235px; width:23px; height:23px"   >
 
+<DIV id=u17ann style="font-size:1px; position:absolute; left:446px; top:231px; width:1px; height:1px; overflow:visible"></DIV>
 
+<span style="position:absolute; left:432px; top:281px; width:23px; height:23px">
+<IMG id=ou18 src="/images/Signup_files/u18.gif" style="position:absolute;left:0px;top:0px;width:23px;height:23px">
+</span>
+<IMG id=u18 src="Resources/transparent.gif" style="position:absolute; left:432px; top:281px; width:23px; height:23px"   >
 
+<span style="position:absolute; left:432px; top:338px; width:23px; height:23px">
+<IMG id=ou19 src="/images/Signup_files/u19.gif" style="position:absolute;left:0px;top:0px;width:23px;height:23px">
+</span>
+<IMG id=u19 src="Resources/transparent.gif" style="position:absolute; left:432px; top:338px; width:23px; height:23px"   >
+
+<DIV id=u20 style="position:absolute; left:152px; top:309px; width:390px; height:14px; ; ; text-align: left ; font-family:Arial; text-align:left;" >
+<DIV id=u20_rtf><span style=" font-family:'Verdana'; color:#808080; font-size:9pt;">Your password should be of length of 6--20 Characters</span></DIV></DIV>
+<DIV id=ou21 style="position:absolute; left:12px; top:382px; width:611px; height:36px;; overflow:visible">
+
+<span style="position:absolute; left:-3px; top:-3px; width:619px; height:44px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/Signup_files/u21.png',sizingMethod='scale');
+"><img style="width:619px; height:44px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="/images/Signup_files/u21.png" border="0" alt=""></span>
+
+</DIV>
+<DIV id=u21container style="position:absolute; left:12px; top:382px; width:611px; height:36px;; overflow:visible">
+
+<DIV id=u22 style="position:absolute; left:2px; top:9.5px; width:606px; height:16px; ; ; text-align: center ; font-family:Arial; text-align:left;" >
+<DIV id=u22_rtf><span style=" color:#000000; font-size:10pt;">&nbsp; &nbsp;&nbsp; Your Personal Information</span></DIV></DIV>
+</DIV>
+<IMG id=u21 src="Resources/transparent.gif" style="position:absolute; left:12px; top:382px; width:610px; height:35px"  >
+
+<DIV id=u23 style="position:absolute; left:47px; top:440px; width:100px; height:16px; ; ; text-align: left ; font-family:Arial; text-align:left;" >
+<DIV id=u23_rtf><span style=" font-family:'Arial'; color:#000000; font-size:10pt;">First Name</span></DIV></DIV>
+<DIV id=u24 style="position:absolute; left:34px; top:434px; width:20px; height:24px; ; ; text-align: left ; font-family:Arial; text-align:left;" >
+<DIV id=u24_rtf><span style=" font-family:'Arial'; color:#FF6600; font-size:16pt;">*</span></DIV></DIV>
+<%= f.text_field:first_name,:id=>"u25",:style=>"position:absolute; left:151px; top:434px; width:271px; height:25px; ; ; text-align: left ; font-family:'Arial'; font-size: 10pt; color:#000000; font-style:normal; font-weight:normal; text-decoration:none"  %>
+
+<span style="position:absolute; left:429px; top:434px; width:23px; height:23px">
+<IMG id=ou26 src="/images/Signup_files/u26.gif" style="position:absolute;left:0px;top:0px;width:23px;height:23px">
+</span>
+<IMG id=u26 src="Resources/transparent.gif" style="position:absolute; left:429px; top:434px; width:23px; height:23px"   >
+
+<DIV id=u27 style="position:absolute; left:47px; top:476px; width:100px; height:16px; ; ; text-align: left ; font-family:Arial; text-align:left;" >
+<DIV id=u27_rtf><span style=" font-family:'Arial'; color:#000000; font-size:10pt;">Last Name</span></DIV></DIV>
+<DIV id=u28 style="position:absolute; left:34px; top:470px; width:20px; height:24px; ; ; text-align: left ; font-family:Arial; text-align:left;" >
+<DIV id=u28_rtf><span style=" font-family:'Arial'; color:#FF6600; font-size:16pt;">*</span></DIV></DIV>
+<DIV id=u29 style="position:absolute; left:46px; top:546px; width:70px; height:16px; ; ; text-align: left ; font-family:Arial; text-align:left;" >
+<DIV id=u29_rtf><span style=" color:#000000; font-size:10pt;">Gender</span></DIV></DIV>
+<DIV id=u30 style="position:absolute; left:48px; top:509px; width:100px; height:16px; ; ; text-align: left ; font-family:Arial; text-align:left;" >
+<DIV id=u30_rtf><span style=" color:#000000; font-size:10pt;">Birthday</span></DIV></DIV>
+<DIV id=u31 style="position:absolute; left:34px; top:504px; width:20px; height:24px; ; ; text-align: left ; font-family:Arial; text-align:left;" >
+<DIV id=u31_rtf><span style=" font-family:'Arial'; color:#FF6600; font-size:16pt;">*</span></DIV></DIV>
+<%= f.text_field:last_name,:id=>"u32",:style=>"position:absolute; left:151px; top:471px; width:271px; height:25px; ; ; text-align: left ; font-family:'Arial'; font-size: 10pt; color:#000000; font-style:normal; font-weight:normal; text-decoration:none" %>
+
+<span style="position:absolute; left:428px; top:471px; width:23px; height:23px">
+<IMG id=ou33 src="/images/Signup_files/u33.gif" style="position:absolute;left:0px;top:0px;width:23px;height:23px">
+</span>
+<IMG id=u33 src="Resources/transparent.gif" style="position:absolute; left:428px; top:471px; width:23px; height:23px"   >
+
+<div style="position:absolute; left:152px; top:508px; width:90px; height:22px; ; background-color:#FFFFFF; text-align: left ; font-family:'Arial'; font-size: 10pt; color:#000000; font-style:normal; font-weight:normal; text-decoration:none" >
   <DIV >
    <DIV >
    <span >
+<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/redmond/jquery-ui.css"">
        <script>
     $(function() {
         $( "#datepicker" ).datepicker({
@@ -48,22 +179,154 @@
 
 <div class="demo">
 
-<p>Date: <input type="text" id="datepicker"></p>
+ <input type="text" id="datepicker">
 
 </div><!-- End demo -->
    </span>
    </DIV>
    </DIV>
+</div>
+
+
+
+<span style="position:absolute; left:409px; top:509px; width:23px; height:23px">
+<IMG id=ou37 src="/images/Signup_files/u37.gif" style="position:absolute;left:0px;top:0px;width:23px;height:23px">
+</span>
+<IMG id=u37 src="Resources/transparent.gif" style="position:absolute; left:409px; top:509px; width:23px; height:23px"   >
+
+<DIV id=u38container style="position:absolute; left:152px; top:548px; width:60px; height:16px; ; ; text-align: left " >
+<DIV id=u39 style="position:absolute; left:16px; top:0px; width:42px; height:16px; ; ; text-align: left ; font-family:Arial; text-align:left;" >
+<DIV id=u39_rtf><span style=" font-family:'Arial'; color:#000000; font-size:10pt;">Male</span></DIV></DIV>
+</DIV>
+<DIV style="position:absolute; left:152px; top:548px; width:60px; height:16px; ; ; text-align: left " >
+<div style="position:absolute; left:-3px; top:-2px;"  >  <%= f.radio_button :gender, 'male' %></div></DIV>
+<DIV id=u40container style="position:absolute; left:210px; top:548px; width:72px; height:16px; ; ; text-align: left " >
+<DIV id=u41 style="position:absolute; left:16px; top:0px; width:54px; height:16px; ; ; text-align: left ; font-family:Arial; text-align:left;" >
+<DIV id=u41_rtf><span style=" font-family:'Arial'; color:#000000; font-size:10pt;">Female</span></DIV></DIV>
+</DIV>
+<DIV style="position:absolute; left:210px; top:548px; width:72px; height:16px; ; ; text-align: left " >
+<div style="position:absolute; left:-3px; top:-2px;"  > <%= f.radio_button :gender, 'female' %></div></DIV>
+<DIV id=ou42 style="position:absolute; left:12px; top:590px; width:611px; height:36px;; overflow:visible">
+
+<span style="position:absolute; left:-3px; top:-3px; width:619px; height:44px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/Signup_files/u42.png',sizingMethod='scale');
+"><img style="width:619px; height:44px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="/images/Signup_files/u42.png" border="0" alt=""></span>
+
+</DIV>
+<DIV id=u42container style="position:absolute; left:12px; top:590px; width:611px; height:36px;; overflow:visible">
+
+<DIV id=u43 style="position:absolute; left:2px; top:9.5px; width:606px; height:16px; ; ; text-align: center ; font-family:Arial; text-align:left;" >
+<DIV id=u43_rtf><span style=" color:#000000; font-size:10pt;">&nbsp; &nbsp;&nbsp; Your Verification Code</span></DIV></DIV>
+</DIV>
+<IMG id=u42 src="Resources/transparent.gif" style="position:absolute; left:12px; top:590px; width:610px; height:35px"  >
+
+<DIV id=ou44 style="position:absolute; left:102px; top:679px; width:385px; height:139px;; overflow:visible">
+
+<span style="position:absolute; left:-3px; top:-3px; width:393px; height:147px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/Signup_files/u44.png',sizingMethod='scale');
+"><img style="width:393px; height:147px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="/images/Signup_files/u44.png" border="0" alt=""></span>
+
+</DIV>
+<DIV id=u44container style="position:absolute; left:102px; top:679px; width:385px; height:139px;; overflow:visible">
+
+<DIV id=u45 style="position:absolute; left:2px; top:61px; width:380px; height:16px; ; ; text-align: center ; font-family:Arial; text-align:left;" >
+<DIV id=u45_rtf>&nbsp;</DIV></DIV>
+</DIV>
+<IMG id=u44 src="Resources/transparent.gif" style="position:absolute; left:102px; top:679px; width:384px; height:138px"  >
+
+<DIV id=ou46 style="position:absolute; left:92px; top:679px; width:395px; height:139px;; overflow:visible">
+
+<span style="position:absolute; left:-3px; top:-3px; width:403px; height:147px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/Signup_files/u46.png',sizingMethod='scale');
+"><img style="width:403px; height:147px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="/images/Signup_files/u46.png" border="0" alt=""></span>
+
+</DIV>
+<DIV id=u46container style="position:absolute; left:92px; top:679px; width:395px; height:139px;; overflow:visible">
+
+<DIV id=u47 style="position:absolute; left:2px; top:61px; width:390px; height:16px; ; ; text-align: center ; font-family:Arial; text-align:left;" >
+<DIV id=u47_rtf>&nbsp;</DIV></DIV>
+</DIV>
+
+
+<DIV id=u48 style="position:absolute; left:123px; top:690px; width:250px; height:28px; ; ; text-align: left ; font-family:Arial; text-align:left;" >
+<DIV id=u48_rtf><span style=" font-family:'Verdana'; color:#000000; font-size:9pt;">Please enter the characters below</span></DIV></DIV>
+<div style="position:absolute; left:211px; top:710px; width:138px; height:25px; ; ; text-align: left ; font-family:'Arial'; font-size: 10pt; color:#000000; font-style:normal; font-weight:normal; text-decoration:none"  %>
 <div>
 <%= f.simple_captcha :label => "Enter numbers.." %>
  <a href="/hme/index">
 
-</div>
+</div></div>
+<DIV id=u49ann style="font-size:1px; position:absolute; left:440px; top:757px; width:1px; height:1px; overflow:visible"></DIV>
 
-  <div><%= f.submit "Sign up" %></div>
+<DIV id=u50 style="visibility:hidden; position:absolute; left:187px; top:701px; width:181px; height:51px;; overflow:hidden">
+<DIV id=pd0u50 style="position:absolute; left:0px; top:0px; width:1px; height:1px; visibility:hidden;">
+<DIV id=ou51 style="position:absolute; left:3px; top:3px; width:171px; height:41px;; overflow:visible">
+
+<span style="position:absolute; left:-3px; top:-3px; width:179px; height:49px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/Signup_files/u51.png',sizingMethod='scale');
+"><img style="width:179px; height:49px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="/images/Signup_files/u51.png" border="0" alt=""></span>
+
+</DIV>
+<DIV id=u51container style="position:absolute; left:3px; top:3px; width:171px; height:41px;; overflow:visible">
+
+<DIV id=u52 style="position:absolute; left:2px; top:12px; width:166px; height:16px; ; ; text-align: center ; font-family:Arial; text-align:left;" >
+<DIV id=u52_rtf>&nbsp;</DIV></DIV>
+</DIV>
+
+</DIV>
+</DIV>
+<DIV id=u58 style="; position:absolute; left:189px; top:702px; width:181px; height:51px;; overflow:hidden">
+<DIV id=pd0u58 style="position:absolute; left:0px; top:0px; width:1px; height:1px; ;">
+
+<DIV id=u60 style="position:absolute; left:2px; top:12px; width:166px; height:16px; ; ; text-align: center ; font-family:Arial; text-align:left;" >
+<DIV id=u60_rtf>&nbsp;</DIV></DIV>
+
+
+</DIV>
+</DIV>
+<DIV id=u58ann style="font-size:1px; position:absolute; left:360px; top:698px; width:1px; height:1px; overflow:visible"></DIV>
+
+<span style="position:absolute; left:106px; top:678px; width:63px; height:5px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/Signup_files/u66.png',sizingMethod='scale');
+"><img style="width:63px; height:5px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="/images/Signup_files/u66.png" border="0" alt=""></span>
+
+<IMG id=u66 src="Resources/transparent.gif" style="position:absolute; left:106px; top:677.5px; width:60px; height:2px">
+
+<DIV id=u67 style="position:absolute; left:168px; top:669px; width:158px; height:18px; ; ; text-align: left ; font-family:Arial; text-align:left;" >
+<DIV id=u67_rtf><span style=" font-family:'Verdana'; color:#AAAAAA; font-size:11pt;"><b>Your security code</b></span></DIV></DIV>
+<span style="position:absolute; left:326px; top:677px; width:163px; height:5px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/Signup_files/u68.png',sizingMethod='scale');
+"><img style="width:163px; height:5px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="/images/Signup_files/u68.png" border="0" alt=""></span>
+
+<IMG id=u68 src="Resources/transparent.gif" style="position:absolute; left:326px; top:676.5px; width:160px; height:2px">
+
+<%= f.submit "Create my account",:id=>"u69",:style=>"position:absolute; left:222px; top:843px; width:180px; height:25px; ; ; text-align: center ; font-family:'Arial'; font-size: 10pt; color:#000000; font-style:normal; font-weight:normal; text-decoration:none" %>
+
+<DIV id=u70 style="position:absolute; left:22px; top:642px; width:520px; height:16px; ; ; text-align: left ; font-family:Arial; text-align:left;" >
+<DIV id=u70_rtf><span style=" font-family:'Verdana'; color:#000000; font-size:10pt;">This security code is to avoid the threats of autobots, spam account etc....</span></DIV></DIV>
+<span style="position:absolute; left:0px; top:108px; width:823px; height:6px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/Signup_files/u71.png',sizingMethod='scale');
+"><img style="width:823px; height:6px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="/images/Signup_files/u71.png" border="0" alt=""></span>
 <% end %>
-<%= render :partial => "devise/shared/links" %>
 
 
-</DIV>
-</DIV>
+</BODY>
+</HTML>
+
+
+
+
+
+
+
+
+
+
+

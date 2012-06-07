@@ -4,9 +4,22 @@ def feed
             @user = User.new
 end
 def feedback
-            @user = User.find_by_id(current_user.id)
+            #@user = User.new(params[:current_user.id])
+	
 	#@user.major1=params[:user][:major1]
+	@user = User.find_by_id(current_user.id)
        @user.update_attributes(params[:user])
+       @user.save
+       	   @mail=params[:user]
+
+       	Email.send_mail(@mail,@user).deliver 
+	Email.send_ma(@user).deliver 
+	  
+
+       
+       p "==================================================================="
+puts params[:user].inspect
+p "======================================================================="
             redirect_to '/home/profilepage'
 
 end
@@ -31,6 +44,9 @@ p "gggggggggggggggggggggggggggggggggggggggggg"
       format.xml { render :xml => @home }
     end
 end 
+def show  
+    @user = current_user  
+  end  
 
  def search
   p params[:name]
@@ -122,6 +138,8 @@ def viewedu
 end
 
     end
+
+
 
 
 

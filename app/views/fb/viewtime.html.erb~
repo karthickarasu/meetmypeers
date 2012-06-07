@@ -1,0 +1,30 @@
+ <script src="/assets/livevalidation_standalone.js"></script>
+ 
+ 
+ <br/><br/><br/><br/> <br/><br/><br/><br/>
+ <%if !@user.blank? %>
+
+ <table align="left" cellspaceing="10">
+ <% @user.each do |m| %>
+  <tr>
+  <td>Day   </td>
+  <td><%=m.days %></td>
+  </tr>
+  <tr>
+  <td>From time</td>
+
+  <td><%=m.from_time.strftime("%H:%M-%p") %></td>
+  </tr>
+  <tr>
+  <td>End Time </td>
+  <td><%=m.to_time.strftime("%H:%M-%p") %></td>
+  </tr>
+  <tr>
+  
+<td><%=link_to "Edit", fb_new_path %></td>
+</tr>
+<%end%><td><%= link_to "Add availability Details", fb_new_path%></td>
+</table>
+<%else%>
+<h1>don't Have any Availability. please select your availability from <%= link_to "Add availability Details", fb_new_path%></h1>
+<%end%>

@@ -1,22 +1,25 @@
 <br><br><br><br><br>
 <h3>List of peers</h3>
 <br><br>
-
-
+   
 <% @home.each do |p| %>
 <% unless current_user.id==p.id  %>
 <table border=1>
    <tr>
 	<th>Member Name</th><td><%=p.first_name%></td>
 	<th>Title</th> 
-	<th>Experiance</th> 
+	<th>Add friends</th> <td><%= link_to "click here","/friendship/addfriend/#{p.id}" %> </td> 
        <th>Email</th> <td><%= link_to p.email,"/write/#{p.id}" %></td>
    </tr>
    <tr>	
 	<th>Member image</th><td><%= image_tag p.avatar.url(:thumb)%></td>
 	<th>Interests</th>
+  
+
    </tr>
 </table>
+
+
 
 <% end %>
 
