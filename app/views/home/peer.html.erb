@@ -4,20 +4,26 @@
    
 <% @home.each do |p| %>
 <% unless current_user.id==p.id  %>
-<table border=1>
+<TABLE border=1 bgcolor=#FFFFFF>
    <tr>
-	<th>Member Name</th><td><%=p.first_name%></td>
-	<th>Title</th> 
-	<th>Add friends</th> <td><%= link_to "click here","/friendship/addfriend/#{p.id}" %> </td> 
-       <th>Email</th> <td><%= link_to p.email,"/write/#{p.id}" %></td>
-   </tr>
-   <tr>	
-	<th>Member image</th><td><%= image_tag p.avatar.url(:thumb)%></td>
-	<th>Interests</th>
-  
+	<th>Member Name</th>
+	<th>Member image</th >   
+	<th>Email</th>
+	<th>Send friends Request</th> 
+	<th>Send Message</th> 
+	<th>Profile Details</th> 
 
    </tr>
-</table>
+   <tr>	
+	<td><%=p.first_name%></td>
+	<td><%= image_tag p.avatar.url(:thumb)%></td>
+	<td><%=p.email%></td>
+	<td><%= link_to "click here","/friendship/addfriend/#{p.id}" %> </td> 
+	<td><%= link_to p.email,"/write/#{p.id}" %></td>
+	 </td><%= link_to  "full details", "/home/fulldetails/#{p.id}" %></td>
+   </tr>
+</TABLE>
+   
 
 
 

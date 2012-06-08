@@ -2,25 +2,30 @@
 <h3>List of  my peers</h3>
 <br><br>
 
-   <%=current_user.id%>
 <% @friend.each do |p| %>
 <% unless current_user.id==p.id  %>
 <table border=1>
    <tr>
-	<th>Member Name</th><td><%=p.first_name%></td>
-	<th>Title</th> 
-	<th>Experiance</th> 
-       <th>Email</th> <td><%= link_to p.email,"/write/#{p.id}" %></td>
+	<th>Member Name</th>
+	<th>Member image</th>
+       <th>Email</th> 
+	<th>Send Message</th> 
+	<th>Delete</th> 
+
+
    </tr>
    <tr>	
-	<th>Member image</th><td><%= image_tag p.avatar.url(:thumb)%></td>
-	<th>Interests</th>
+	<td><%=p.first_name%></td>
+	<td><%= image_tag p.avatar.url(:thumb)%></td>
+	<td><%=p.email%></td>
+	<td><%= link_to p.email,"/write/#{p.id}" %></td>
+	<td><%= link_to image_tag("delete.jpeg"), friendship_destroy_path %></td>
+
 
    </tr>
 </table>
 
 <% end %>
-  
 
 
 

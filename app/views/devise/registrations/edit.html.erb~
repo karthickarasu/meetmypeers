@@ -1,40 +1,99 @@
+<HTML><HEAD><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta http-equiv="imagetoolbar" content="no"><link href="Resources/axurerppage.css" type="text/css" rel="stylesheet"></HEAD><BODY>
+<script type="text/javascript">
+function InitializeSubmenu(submenucontainerid, tablecellroid, tablecellid, fname) { 
+var s = "";
+s = s + "function " + fname + "() { ";
+s = s + "document.getElementById(submenucontainerid).style.visibility='';";
+s = s + "BringToFront(submenucontainerid);";
+s = s + "}";
+if ((index = navigator.userAgent.indexOf("MSIE")) >= 0)
+s = s + "document.getElementById('" + tablecellid + "').attachEvent(\"onmouseover\", " + fname + ");";
+else
+s = s + "document.getElementById('" + tablecellid + "').addEventListener(\"mouseover\", " + fname + ", true);";
+s = s + "document.getElementById(tablecellroid).onclick = function() {";
+s = s + "if( document.createEvent ) {";
+s = s + "var evObj = document.createEvent('MouseEvents');";
+s = s + "evObj.initEvent( 'click', true, false );";
+s = s + "document.getElementById(tablecellid).dispatchEvent(evObj);";
+s = s + "} else if( document.createEventObject ) {";
+s = s + "document.getElementById(tablecellid).fireEvent('onclick');";
+s = s + "}";
+s = s + "}";
+eval(s);
+}
+</script>
 
+
+
+<DIV id=ou0 style="position:absolute; left:10px; top:160px; width:546px; height:291px;; overflow:visible">
+
+<span style="position:absolute; left:-3px; top:-3px; width:554px; height:299px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/Change your password_files/u0.png',sizingMethod='scale');
+"><img style="width:554px; height:299px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="/images/Change your password_files/u0.png" border="0" alt=""></span>
+
+</DIV>
+<DIV id=u0container style="position:absolute; left:10px; top:160px; width:546px; height:291px;; overflow:visible">
+
+<DIV id=u1 style="position:absolute; left:2px; top:137px; width:541px; height:16px; ; ; text-align: center ; font-family:Arial; text-align:left;" >
+<DIV id=u1_rtf>&nbsp;</DIV></DIV>
+</DIV>
 
 <%= form_for(resource, :as => resource_name, :html => { :multipart => true }, :url => registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
+<IMG id=u0 src="Resources/transparent.gif" style="position:absolute; left:10px; top:160px; width:545px; height:290px"  >
+
+<DIV id=ou2 style="position:absolute; left:11px; top:164px; width:543px; height:33px;; overflow:visible">
+
+<span style="position:absolute; left:-3px; top:-3px; width:551px; height:41px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/Change your password_files/u2.png',sizingMethod='scale');
+"><img style="width:551px; height:41px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="/images/Change your password_files/u2.png" border="0" alt=""></span>
+
+</DIV>
+<DIV id=u2container style="position:absolute; left:11px; top:164px; width:543px; height:33px;; overflow:visible">
+
+<DIV id=u3 style="position:absolute; left:2px; top:8px; width:538px; height:16px; ; ; text-align: center ; font-family:Arial; text-align:left;" >
+<DIV id=u3_rtf><span style=" color:#000000; font-size:10pt;">&nbsp; &nbsp;&nbsp; Change Password</span></DIV></DIV>
+</DIV>
+<IMG id=u2 src="Resources/transparent.gif" style="position:absolute; left:11px; top:164px; width:542px; height:32px"  >
+
+<DIV id=u4 style="position:absolute; left:52px; top:261px; width:120px; height:16px; ; ; text-align: left ; font-family:Arial; text-align:left;" >
+<DIV id=u4_rtf><span style=" font-family:'Arial'; color:#000000; font-size:10pt;">Current Password</span></DIV></DIV>
+<DIV id=u5 style="position:absolute; left:67px; top:303px; width:100px; height:16px; ; ; text-align: left ; font-family:Arial; text-align:left;" >
+<DIV id=u5_rtf><span style=" font-family:'Arial'; color:#000000; font-size:10pt;">New Password</span></DIV></DIV>
+<DIV id=u6 style="position:absolute; left:49px; top:352px; width:140px; height:16px; ; ; text-align: left ; font-family:Arial; text-align:left;" >
+<DIV id=u6_rtf><span style=" font-family:'Arial'; color:#000000; font-size:10pt;">Confirm Password</span></DIV></DIV>
+<div style="position:absolute; left:168px; top:256px; width:210px; height:25px; ; ; text-align: left ; font-family:'Arial'; font-size: 10pt; color:#000000; font-style:normal; font-weight:normal; text-decoration:none"   >  <%= f.password_field :current_password %></div>
+
+<div style="position:absolute; left:168px; top:297px; width:210px; height:25px; ; ; text-align: left ; font-family:'Arial'; font-size: 10pt; color:#000000; font-style:normal; font-weight:normal; text-decoration:none"   >  <%= f.password_field :password %></div>
+
+<div style="position:absolute; left:168px; top:346px; width:210px; height:25px; ; ; text-align: left ; font-family:'Arial'; font-size: 10pt; color:#000000; font-style:normal; font-weight:normal; text-decoration:none"   >  <%= f.password_field :password_confirmation%></div>
+
+<DIV id=u10 style="position:absolute; left:168px; top:323px; width:374px; height:16px; ; ; text-align: left ; font-family:Arial; text-align:left;" >
+<DIV id=u10_rtf><span style=" font-family:'Arial'; color:#808080; font-size:10pt;">( Type your password here, if you want to change the password )</span></DIV></DIV>
+<DIV id=u11 style="position:absolute; left:168px; top:372px; width:360px; height:16px; ; ; text-align: left ; font-family:Arial; text-align:left;" >
+<DIV id=u11_rtf><span style=" font-family:'Arial'; color:#808080; font-size:10pt;">( Retype your password if you're changing the password )</span></DIV></DIV>
+<span style="position:absolute; left:0px; top:115px; width:813px; height:6px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/Change your password_files/u12.png',sizingMethod='scale');
+"><img style="width:813px; height:6px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="/images/Change your password_files/u12.png" border="0" alt=""></span>
+<DIV id=u20ann style="font-size:1px; position:absolute; left:427px; top:85px; width:1px; height:1px; overflow:visible"></DIV>
+
+<div style="position:absolute; left:147px; top:407px; width:130px; height:25px; ; ; text-align: center ; font-family:'Arial'; font-size: 10pt; color:#000000; font-style:normal; font-weight:normal; text-decoration:none" ><%= f.submit "Save changes" %></div>
+
+<DIV id=u62 style="position:absolute; left:291px; top:411px; width:20px; height:16px; ; ; text-align: left ; font-family:Arial; text-align:left;" >
+<DIV id=u62_rtf><span style=" font-family:'Arial'; color:#000000; font-size:10pt;">Or</span></DIV></DIV>
+<DIV id=u63 style="position:absolute; left:317px; top:410px; width:50px; height:16px; ; ; text-align: left ; font-family:Arial; text-align:left;" >
+<DIV id=u63_rtf><span style=" font-family:'Arial'; color:#0000FF; font-size:10pt;"><u>Cancel</u></span></DIV></DIV>
+<span style="position:absolute; left:0px; top:545px; width:783px; height:7px; ;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/Change your password_files/u64.png',sizingMethod='scale');
+"><img style="width:783px; height:7px; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" 
+src="/images/Change your password_files/u64.png" border="0" alt=""></span>
 
 
-<style>
-
-	
-	 input[type=text] { float: right; width: 250px; }
-
-         
-	
-</style>
-
-
-
-
-
-<br/><br/><br/><br/><br/><br/>
-<h2>Change password</h2>
-<table class="curvedEdges" border="10" cellpadding="15">
-<td>
-      <br/><div><%= f.label :current_password %> 
-  <%= f.password_field :current_password %></div><br />
-
-          <div><%= f.label :Newpassword %> 
-  <%= f.password_field :password %></div><br />
-
-  <div><%= f.label :password_confirmation %>
-  <%= f.password_field :password_confirmation %></div><br />
-</td>
-
-</table>
-<br/><br/>
-
-  <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <%= f.submit "Save changes" %></div>
+<SCRIPT src="Resources/axurerp_pagescript.js"></SCRIPT>
+<SCRIPT src="/images/Change your password_files/axurerp_pagespecificscript.js"></SCRIPT></BODY></HTML>
 <% end %>
 
 
@@ -44,6 +103,9 @@
 
 <%= link_to "Back", :back %>
 <%= render :partial => "devise/shared/links" %>
+
+
+
 
 
 

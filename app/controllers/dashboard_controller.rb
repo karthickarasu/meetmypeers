@@ -13,4 +13,8 @@ class DashboardController < ApplicationController
 	redirect_to edit_user_password_path
 end
 
+
+ def fulldetails
+	 end
+
 end

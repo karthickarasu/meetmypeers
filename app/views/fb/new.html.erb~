@@ -6,7 +6,7 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
 
-<h3 align="center">Checking Availability</h3>
+<h3 align="center">Managed Availability Time</h3>
 <br />
 <br />
 </head>
@@ -15,13 +15,7 @@
 <div align="center" id="bodypart">
 <%= form_for:user, :url => {:controller=>'fb',:action=>'create',:id=>params[:id]} do |f| %>
 
-
-
-
-
 From Time
-
-
 
 <%= f.time_select(:from_time,:ampm => true, :default => 0.days.from_now.in_time_zone(@timezone)) %>
 

@@ -45,8 +45,25 @@ puts @friend.inspect
    end
    
    def friend_show
-	   @friendrequest=Friendship.find_all_by_user_id(current_user.id).map(&:friend_id)
-
+	   @friendrequest=Friendship.find_all_by_friend_id(current_user.id).map(&:user_id)
+		@res=User.find_all_by_id(@friendrequest)
  end
+  
+   def deny
+    @u=Friendship.find_by_user_id(params[:id])
+    denypeer=Friendship.find_by_user_id(params[:id])   
+      denypeer.destroy
+          redirect_to  "/friendship/friend_show"
+	end
+  
+    def destroy
+    @avail=Friendship.find_by_user_id(current_user.id) 
+    @avail.destroy
+    redirect_to  "/friendship/mypeer"
+  end
+  
+  
+  
+  
   
 end

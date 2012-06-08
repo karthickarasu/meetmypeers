@@ -1,0 +1,87 @@
+
+    
+    
+    <br><br><br><br><br>
+
+<% @home.each do |p| %>
+
+<body bgcolor="red">
+
+<p><h3>Profile details for <%=p.first_name%></h3></p>
+
+</body>
+
+
+<h3>Personal Information</h3>
+
+
+<TABLE border=1 bgcolor=#FFFFFF>    <tr>
+	 <th>Member Name</th>
+	 <th>Member Image</th> 
+	 <th>Email</th> 
+	<th>State</th> 
+
+   </tr>
+   <tr>	
+       <td><%=p.first_name%></td>
+       <td><%= image_tag p.avatar.url(:thumb)%></td>
+	<td><%=p.email%></td>
+	<td><%=p.state%></td>
+
+
+  
+
+   </tr>
+</TABLE>
+
+
+<h3>Availablity Time</h3>
+
+
+<TABLE border=1 bgcolor=#FFFFFF>    <tr>
+	 <th>Day</th>
+	 <th>Start Time</th> 
+	 <th>End Time</th> 
+   </tr>
+   <tr>	
+       <td><%=p.days%></td>
+       <td><%= p.from_time%></td>
+	<td><%=p.endtime%></td>
+
+  </tr>
+</table>
+
+<h3>Work  Information</h3>
+
+
+<TABLE border=1 bgcolor=#FFFFFF>    <tr>
+	 <th>Name of the Company</th>
+	 <th>Role</th> 
+	 <th>Technology</th> 
+   </tr>
+   <tr>	
+       <td><%=p.companyname%></td>
+       <td><%= p.title%></td>
+	<td><%=p.jobcategory%></td>
+
+  </tr>
+</table>
+
+
+<h3>Educational  Information</h3>
+
+
+<TABLE border=1 bgcolor=#FFFFFF>    <tr>
+	 <th>Name of the University</th>
+	 <th>Course</th> 
+	 
+   </tr>
+   <tr>	
+       <td><%=p.collegeuniversity%></td>
+       <td><%= p.major1%></td>
+
+  </tr>
+</table>
+
+<% end %>
+

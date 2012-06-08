@@ -51,14 +51,20 @@ match 'home/edup' => 'home#edup'
 match 'home/viewwork' => 'home#viewwork'
 match 'home/viewedu' => 'home#viewedu'
 match 'home/destroy' => 'home#destroy'
+match 'home/fulldetails/:id' => 'home#fulldetails'
+
 match 'home/profile1' => 'home#profile1'
 match 'fb/new' => 'fb#new'
 match 'fb/create' => 'fb#create'
 match 'fb/viewtime' => 'fb#viewtime'
 match 'friendships/friend_show' => 'friendships#friend_show'
+match 'friendship/deny/:id' => 'friendships#deny'
+match 'friendship/deny' => 'friendships#deny'
 
 match 'friendship/addfriend/:id' => 'friendships#addfriend'
 match 'friendship/mypeer' => 'friendships#mypeer'
+match 'friendship/destroy' => 'friendships#destroy'
+
  # get "feedbacks/feedback"
 
   #match 'fb' => 'fb#fb'
@@ -67,7 +73,7 @@ devise_for :users do
   get '/users/sign_out' => 'devise/sessions#destroy'
   get 'home/search' => 'devise/home#search'
   
-get '/users/sign_out' => 'users#signin'
+#get '/users/sign_out' => 'users#signin'
 end
 
 devise_for :users, :controllers => {:registrations => "registrations"}

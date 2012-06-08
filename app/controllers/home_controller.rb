@@ -139,7 +139,10 @@ end
 
     end
 
+def fulldetails
+	@home=User.find_all_by_id(params[:id])
 
+end	
 
 
 
