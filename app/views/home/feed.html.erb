@@ -25,6 +25,9 @@ eval(s);
 </script>
 
 
+
+
+
 <span style="position:absolute; left:8px; top:131px; width:566px; height:12px">
 <span id=ou9 style="position:absolute;left:0px;top:0px;width:566px;height:12px;
 filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/Feedback form_files/u9.png',sizingMethod='scale');
@@ -47,7 +50,7 @@ filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/Feedback 
 src="/images/Feedback form_files/u11.png" border="0" alt=""></span>
 
 <%=form_for :user, :url => {:controller=>'home', :action => 'feedback' } do |f|%>
-
+<script src="/javascripts/livevalidation_standalone.js"></script>
 
 <IMG id=u11 src="Resources/transparent.gif" style="position:absolute; left:11.5px; top:143px; width:2px; height:617px">
 
@@ -159,6 +162,26 @@ src="/images/Feedback form_files/u37.png" border="0" alt=""></span>
 <DIV id=u44 style="position:absolute; left:117px; top:390px; width:93px; height:16px; ; ; text-align: left ; font-family:Arial; text-align:left;" >
 <DIV id=u44_rtf><span style=" font-family:'Arial'; color:#000000; font-size:10pt;">Your Website:</span></DIV></DIV>
 <%= f.text_field:website,:id=>"u45",:style=>"position:absolute; left:209px; top:385px; width:150px; height:25px; ; ; text-align: left ; font-family:'Arial'; font-size: 10pt; color:#000000; font-style:normal; font-weight:normal; text-decoration:none"   %>
+
+<script>
+
+var f1 = new LiveValidation('user_fullname');
+f1.add( Validate.Presence ); 
+
+var f2 = new LiveValidation('user_youremail');
+f2.add( Validate.Presence ); 
+
+var f3 = new LiveValidation('user_subject');
+f3.add( Validate.Presence ); 
+
+var f4 = new LiveValidation('user_comment');
+f4.add( Validate.Presence ); 
+
+
+
+</script>
+
+
 <SCRIPT src="Resources/axurerp_pagescript.js"></SCRIPT>
 
 <SCRIPT src="/images/Feedback form_files/axurerp_pagespecificscript.js"></SCRIPT>

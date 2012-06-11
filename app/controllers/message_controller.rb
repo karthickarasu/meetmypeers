@@ -1,4 +1,5 @@
 class MessageController < ApplicationController
+	  before_filter :authenticate_user!
 def inbox
 		@message=Message.find_all_by_receiver(current_user.id)
 		@rec=Array.new

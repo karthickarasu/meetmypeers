@@ -1,4 +1,5 @@
 class HmeController < ApplicationController
+	  before_filter :authenticate_user!
   def index
 @user.valid_with_captcha?
 

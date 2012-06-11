@@ -22,10 +22,9 @@ has_many :inverse_friends, :through => :inverse_friendships, :source => :user
       :storage => :s3,
      :s3_credentials => "#{RAILS_ROOT}/config/s3.yml"
 
- #validates_presence_of  :first_name,:last_name,:addressline1,:addressline2,:major1,:title,:fullname, :comment, :subject, :citytown, :interest
+ validates_presence_of  :first_name,:last_name,:fullname,:comment,:subject,:youremail
 				
-#validates_attachment :avatar, :presence => true,
-  #:content_type => { :content_type => "avatar/jpg" }
+#validates_attachment :avatar, :presence => true,:content_type => { :content_type => "avatar/jpg" }
 
 #validates_file_presence :avatar 
 #validates_file_size :avatar, :less_than => 1.megabytes, :message => 'file size maximum 1 MB allowed' #validates_file_content_type :avatar, :content_type => ['avatar/jpeg', 'avatar/png', 'avatar/gif', 'avatar/bmp', 'avatar/pjpeg', 'avatar/x-png']

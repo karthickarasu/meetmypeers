@@ -1,4 +1,5 @@
 class RegistrationsController < Devise::RegistrationsController
+	  before_filter :authenticate_user!
  
 #validates simple_captcha
 def new

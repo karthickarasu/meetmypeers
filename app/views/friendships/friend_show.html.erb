@@ -2,11 +2,8 @@
 
 <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 <% @res && @res.each do |f| %>
-You have friend request from  ==
-<%=f.first_name%></br></br></br></br>
-
-<%= link_to "Accept","/friendship/addfriend/#{f.id}" %>
-<%= link_to "Deny","/friendship/deny/#{f.id}" %>
-
+&nbsp&nbsp&nbsp&nbspYou have friend request from=<%=f.first_name%>
+&nbsp&nbsp<%= link_to "Accept","/friendship/addfriend/#{f.id}" %>
+&nbsp&nbsp<%= link_to "Deny","/friendship/deny/#{f.id}" %>
 <%end%>
 

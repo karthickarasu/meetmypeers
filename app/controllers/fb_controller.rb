@@ -1,4 +1,5 @@
 class FbController < ApplicationController
+	  before_filter :authenticate_user!
   def fb
   end
   def peer
