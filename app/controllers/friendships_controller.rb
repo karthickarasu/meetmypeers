@@ -25,7 +25,9 @@ def create
 
 puts @add.inspect
     if @add.save
-      flash[:notice] = "Added friend."  
+      
+    redirect_to  "/friendship/mypeer"
+   flash[:notice] = "Added friend."  
     else
       flash[:error] = "Error occurred when adding friend."  
     end
@@ -53,13 +55,22 @@ puts @friend.inspect
    def deny
     @u=Friendship.find_by_user_id(params[:id])
     denypeer=Friendship.find_by_user_id(params[:id])   
-      denypeer.destroy
-          redirect_to  "/friendship/friend_show"
+      denypeer.destroy 
+    redirect_to  "/friendship/mypeer"
+
 	end
   
     def destroy
     @avail=Friendship.find_by_user_id(current_user.id) 
-    @avail.destroy
+       # @avail=Friendship.find_by_user_id(friend_id) 
+
+    @avail.destroy   
+
+
+#@avail=Friendship.find_by_id(params[:id]) 
+    #@avail.destroy  if @avail.present?
+    #@avail=current_user.friendships.find_by_user_id(params[:id]) 
+    #@avail.delete if @avail.present?
     redirect_to  "/friendship/mypeer"
   end
   

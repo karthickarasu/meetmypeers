@@ -19,7 +19,7 @@
 	<td><%= image_tag p.avatar.url(:thumb)%></td>
 	<td><%=p.email%></td>
 	<td><%= link_to p.email,"/write/#{p.id}" %></td>
-	<td><%= link_to image_tag("delete.jpeg"), friendship_destroy_path %></td>
+	<td><%= link_to image_tag("delete.jpeg"), :id=>p.id, :action => "destroy"  %></td>
 
 
    </tr>

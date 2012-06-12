@@ -63,7 +63,7 @@ match 'friendship/deny' => 'friendships#deny'
 
 match 'friendship/addfriend/:id' => 'friendships#addfriend'
 match 'friendship/mypeer' => 'friendships#mypeer'
-match 'friendship/destroy' => 'friendships#destroy'
+match 'friendship/destroy/:id' => 'friendships#destroy'
 
  # get "feedbacks/feedback"
 
