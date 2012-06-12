@@ -10,6 +10,10 @@ def new
             @user = User.new
 end
 def create
+	
+	
+	@user=User.find_by_id(current_user.id)
+    @user.update_attributes(params[:user])
             @user = User.find_by_id(current_user.id)
 	#@user.major1=params[:user][:major1]
 p "==================================================================="

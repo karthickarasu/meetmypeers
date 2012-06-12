@@ -22,7 +22,7 @@ has_many :inverse_friends, :through => :inverse_friendships, :source => :user
       :storage => :s3,
      :s3_credentials => "#{RAILS_ROOT}/config/s3.yml"
 
- validates_presence_of  :first_name,:last_name,:fullname,:comment,:subject,:youremail
+ validates_presence_of  :first_name,:last_name
 				
 #validates_attachment :avatar, :presence => true,:content_type => { :content_type => "avatar/jpg" }
 
