@@ -18,11 +18,8 @@ end
 def viewwork
  @user=User.find_by_id(current_user.id)
 
-    respond_to do |format|
-    format.html # show.html.erb
-   format.xml  { render :xml => @user }
-      #@user=User.find_all_by_user_id(current_user.id)
-end
+   
+
 end
 
 
@@ -83,11 +80,6 @@ end
 def viewedu
  @user=User.find_by_id(current_user.id)
 
-    respond_to do |format|
-    format.html # show.html.erb
-   format.xml  { render :xml => @user }
-      #@user=User.find_all_by_user_id(current_user.id)
-end
 end
 
 
@@ -102,11 +94,8 @@ def peer
 
 @home=User.all
 @home = User.paginate :page => params[:page], :per_page => 5 
- @home.each{|f| puts f.id}
-respond_to do |format|
-      format.html # index.html.erb
-      format.xml { render :xml => @home }
-    end
+ 
+
 end 
 
 
