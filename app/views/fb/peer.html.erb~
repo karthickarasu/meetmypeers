@@ -1,8 +1,0 @@
-<% @user.each do |p| %>
-<table cellspacing="20">
-    <tr>
-        <th>Name</th>
-        <td><%=p.first_name%><br></td>
-    </tr>
-</table>
-<% end %>
