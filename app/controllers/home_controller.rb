@@ -1,53 +1,48 @@
 class HomeController < ApplicationController
 	  before_filter :authenticate_user!
+def edwork
+            @user = User.new
+end
+    
+def editwork
+    @user=User.find_by_id(current_user.id)
+end
+def edup
+            @user = User.find_by_id(current_user.id)
+	#@user.major1=params[:user][:major1]
+       @user.update_attributes(params[:user])
+            redirect_to '/home/profilepage'
+
+
+end
+def viewwork
+ @user=User.find_by_id(current_user.id)
+
+    respond_to do |format|
+    format.html # show.html.erb
+   format.xml  { render :xml => @user }
+      #@user=User.find_all_by_user_id(current_user.id)
+end
+end
+
 
 def feed
             @user = User.new
 end
 def feedback
-            #@user = User.new(params[:current_user.id])
-	
-	#@user.major1=params[:user][:major1]
+      
 	@user = User.find_by_id(current_user.id)
        @user.update_attributes(params[:user])
        @user.save
-       	   @mail=params[:user]
+	@mail=params[:user]
 
        	Email.send_mail(@mail,@user).deliver 
 	Email.send_ma(@user).deliver 
-	  
-
-       
-       p "==================================================================="
-puts params[:user].inspect
-p "======================================================================="
-            redirect_to '/home/profilepage'
+	  redirect_to '/home/profilepage'
 
 end
 
 
-def peer
-
-@home=User.all
-#@user = User.paginate :page => params[:page], :per_page => 5
-#paginate :per_page => 5, :page => page,
-#@users = User.paginate(:page => params[:page])
-#User.where(:published => true).paginate(:page => params[:page]).order('id DESC')
-   # @user = User.paginate_by_user_id @user.id, :page => params[:page]
-      #@user = User.paginate :page => params[:page], :per_page => 3
-    @home = User.paginate :page => params[:page], :per_page => 5 
-p "fffffffffffffffffffffffffffffffffffffffff"
- @home.each{|f| puts f.id}
-p "gggggggggggggggggggggggggggggggggggggggggg"
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.xml { render :xml => @home }
-    end
-end 
-def show  
-    @user = current_user  
-  end  
 
  def search
   p params[:name]
@@ -60,14 +55,6 @@ end
 def editparent
     @user=User.find_by_id(current_user.id)
 end
- def showparent
-   @user=User.find_by_id(current_user.id)
-
-    respond_to do |format|
-    format.html # show.html.erb
-   format.xml  { render :xml => @user }
-  end
-  end
 def editparent1
     @user=User.find_by_id(current_user.id)
     @user.update_attributes(params[:user])
@@ -75,11 +62,15 @@ def editparent1
     end
 def profilepage
 end
-def editedu
-    @user=User.find_by_id(current_user.id)
-end
+
+
+
+
 def new
             @user = User.new
+end
+def editedu
+    @user=User.find_by_id(current_user.id)
 end
 def create
 
@@ -87,47 +78,7 @@ def create
 	#@user.major1=params[:user][:major1]
        @user.update_attributes(params[:user])
             redirect_to '/home/profilepage'
-
-
 end
-def editwork
-    @user=User.find_by_id(current_user.id)
-end
-             
-
-
-def editwork
-    @user=User.find_by_id(current_user.id)
-end
-def edwork
-            @user = User.new
-end
-def edup
-            @user = User.find_by_id(current_user.id)
-	#@user.major1=params[:user][:major1]
-       @user.update_attributes(params[:user])
-            redirect_to '/home/profilepage'
-
-
-end
- #def destroy
-    #@user = User.find_by_id(current_user.id)
-    #@user.destroy
-    #redirect_to '/home/profile1'
-      	    
- #end
-
-
-def viewwork
- @user=User.find_by_id(current_user.id)
-
-    respond_to do |format|
-    format.html # show.html.erb
-   format.xml  { render :xml => @user }
-      #@user=User.find_all_by_user_id(current_user.id)
-end
-
-    end
 
 def viewedu
  @user=User.find_by_id(current_user.id)
@@ -137,13 +88,26 @@ def viewedu
    format.xml  { render :xml => @user }
       #@user=User.find_all_by_user_id(current_user.id)
 end
+end
 
-    end
+
 
 def fulldetails
 	@home=User.find_all_by_id(params[:id])
 
 end	
+
+
+def peer
+
+@home=User.all
+@home = User.paginate :page => params[:page], :per_page => 5 
+ @home.each{|f| puts f.id}
+respond_to do |format|
+      format.html # index.html.erb
+      format.xml { render :xml => @home }
+    end
+end 
 
 
 

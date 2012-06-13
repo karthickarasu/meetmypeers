@@ -23,6 +23,10 @@ has_many :inverse_friends, :through => :inverse_friendships, :source => :user
      :s3_credentials => "#{RAILS_ROOT}/config/s3.yml"
 
  validates_presence_of  :first_name,:last_name
+ validates :first_name, :format=>{:with =>/^[a-zA-Z\-']+$/, :message => "First name can only contain letters "}
+validates :first_name, :length=>{:in=>2..40, :message => "Please enter first name (2-40 characters)"}
+ validates :last_name, :format=>{:with =>/^[a-zA-Z\-']+$/, :message => "First name can only contain letters "}
+validates :last_name, :length=>{:in=>2..40, :message => "Please enter first name (2-40 characters)"}
 				
 #validates_attachment :avatar, :presence => true,:content_type => { :content_type => "avatar/jpg" }
 
